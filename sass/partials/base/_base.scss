@@ -1,0 +1,67 @@
+
+// ***** Google Web Fonts ******
+
+// Main content:
+// Open Sans regular + light
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic');
+// Open Sans bold + semibold
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:600,600italic,700,700italic');
+
+// Headings:
+// Passion One
+@import url('http://fonts.googleapis.com/css?family=Passion+One:400');
+
+
+// Border box sizing
+* {
+  @include box-sizing('border-box');
+}
+
+html {
+  background-color: $color-webpage-bg;
+}
+
+body {
+  color: $color-black;
+  font-family: $font-family-sans;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  @include border-radius(0);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}

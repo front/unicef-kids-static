@@ -1,0 +1,50 @@
+
+header {
+  border-top: 5px solid $color-header-border;
+}
+
+.light-blue-block {
+  background-color: $color-headers-bg;
+  a {
+    color: $color-header;
+  }
+
+  .unicef-home {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    padding: 0;
+    background-color: $color-headers-alt-bg;
+
+    .before {
+      float: left;
+      @include angleside(-1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+    }
+    .after {
+      float: right;
+      @include angleside(1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+    }
+
+    img {
+      float: right;
+      margin: 0 10px 0 0;
+    }
+    a {
+      font-size: em(14,16);
+      padding: 20px 8px;
+      color: $color-blue;
+    }
+  }
+
+  .main-logo {
+    color: $color-header;
+    padding: 22px 0 15px;
+    font-family: $font-family-headers;
+    font-weight: 400;
+    font-size: 56px;
+  }
+}
+
+.dark-blue-block {
+  @include doublebgcolor($color-blue-darkest, $color-blue-dark);
+}

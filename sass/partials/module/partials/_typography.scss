@@ -1,0 +1,61 @@
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: $font-family-headers;
+}
+
+h1,
+.h1 {
+  font-size: em(68,16);
+  line-height: 1em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.3em 0px;
+}
+
+h2,
+.h2 {
+  font-size: em(46,16);
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.3em 0px;
+}
+
+h3,
+.h3 {
+  font-size: em(30,16);
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.3em 0px;
+}
+
+h4,
+.h4 {
+  font-size: em(26,16);
+  line-height: 1.14em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.2em 0px;
+}
+
+h5,
+.h5 {
+  font-size: em(16,16);
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.2em 0px;
+}
+
+h6,
+.h6 {
+  font-size: em(14,16);
+  line-height: 1.1em;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0px 0px 0.2em 0px;
+}
+
+
+

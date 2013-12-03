@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.l-container {
+  //@include background-grid;
+  position: relative;
+  width: 100%;
+  max-width: $break-medium;
+
+  @include breakpoint($break-medium) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

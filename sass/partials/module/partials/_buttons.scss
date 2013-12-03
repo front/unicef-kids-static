@@ -1,0 +1,22 @@
+
+.btn {
+  display: inline-block;
+  padding: em(12,16) em(35,16);
+  border: none;
+
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+
+  @include single-transition(background-color, 0.3s);
+}
+
+.btn-blue {
+  background-color: $color-blue;
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-blue, 10);
+  }
+}

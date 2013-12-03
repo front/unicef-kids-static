@@ -1,0 +1,32 @@
+
+//  ***** Fonts *****
+
+$font-family-headers: 'Passion One', Verdana, sans-serif;
+$font-family-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+//  ***** Colors *****
+
+// Standalone
+$color-blue:          #009eff;
+$color-blue-dark:     darken($color-blue, 8);
+$color-blue-darkest:  darken($color-blue, 11);
+
+$color-green:         #62cd27;
+$color-orange:        #ff8901;
+$color-yellow:        #ffff00;
+
+$color-white:         white;
+$color-black:         black;
+
+// Backgrounds
+$color-webpage-bg:      $color-white;
+$color-headers-bg:      $color-blue;
+$color-headers-alt-bg:  $color-white;
+
+$color-menu-active-bg:  $color-blue-dark;
+
+// Header
+$color-header-border:   $color-white;
+$color-header:          $color-white;
+$color-header-alt:      $color-blue;
+$color-header-dark:     darken($color-blue, 67);
