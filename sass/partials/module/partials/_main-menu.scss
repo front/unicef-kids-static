@@ -1,84 +1,102 @@
 
 .main-menu {
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: scroll;
+  background-color: $color-blue-dark;
+  display: none;
   ul {
-    margin: 22px 15px;
+    margin: 0;
     padding: 0;
     li {
-      display: none;
-      &.more {
+      list-style: none;
+      a {
+        position: relative;
         display: block;
+        img {
+          display: none;
+        }
+        span {
+          display: block;
+          padding: 20px 15px;
+          border-top: 1px solid $color-white;
+          color: $color-white;
+        }
+      }
+      &:first-child a span {
+        border-top: none;
+      }
+    }
+  }
+
+  @include breakpoint($break-small $break-medium) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include breakpoint($break-small) {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    ul {
+      padding-bottom: 26px;
+      li {
+        margin-top: 36px;
         a {
-          color: $color-blue;
-          @include breakpoint($break-small) {
+          float: left;
+          width: 150px;
+          height: 100px;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
             color: $color-white;
+            border-top: none;
+            padding: 4px 8px;
+            background: rgba(0,0,0,0.7);
           }
         }
       }
     }
   }
 
-  @include breakpoint($break-medium) {
-    position: relative;
-    height: 65px;
-    ul {
-      width: 100%;
-      margin: 0;
+  ul.sub-menu {
+    display: none;
+    @include breakpoint($break-medium) {
+      display: block;
+      float: left;
+      width: 250px;
+      margin-left: 26px;
+      padding-bottom: 0;
       li {
-        list-style: none;
-        display: block;
-        float: left;
-        margin-left: -20px;
-        padding: 0;
-        text-transform: uppercase;
-        &.more {
-          display: none;
-        }
+        margin-top: 0;
         a {
-          display: block;
-          float: left;
-          padding: 16px 10px;
-          height: 65px;
+          width: 100%;
+          height: auto;
+          padding: 9px 0;
+          border-top: 1px solid $color-blue;
           color: $color-white;
-          i {
-            display: inline-block;
-          }
-          span {
-            display: inline-block;
-            vertical-align: middle;
-            margin-top: -12px;
-            padding-left: 8px;
-            font-size: em(18,16);
-          }
         }
-        .before, .after {
-          display: block;
-          float: left;
-          width: 25px;
-          height: 65px;
+        &:first-child a {
+          padding-top: 0;
+          border-top: none;
         }
-        &.active, &:hover {
-          a {
-            background-color: $color-menu-active-bg;
-            color: $color-header-dark;
-          }
-          .before, .after {
-            width: 0;
-            height: 0;
-          }
-          .before {
-            @include angleside(1, 25px, 65px, $color-menu-active-bg, transparent);
-          }
-          .after {
-            @include angleside(-1, 25px, 65px, $color-menu-active-bg, transparent);
-          }
-        }
-
       }
     }
   }
 }
 
-
+body.open-menu .main-menu {
+  display: block;
+}

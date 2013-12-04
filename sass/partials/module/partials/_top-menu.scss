@@ -1,0 +1,84 @@
+
+.top-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  ul {
+    margin: 22px 15px;
+    padding: 0;
+    li {
+      display: none;
+      &.more {
+        display: block;
+        a {
+          color: $color-blue;
+          @include breakpoint($break-small) {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    position: relative;
+    height: 65px;
+    ul {
+      width: 100%;
+      margin: 0;
+      li {
+        list-style: none;
+        display: block;
+        float: left;
+        margin-left: -20px;
+        padding: 0;
+        text-transform: uppercase;
+        &.more {
+          display: none;
+        }
+        a {
+          display: block;
+          float: left;
+          padding: 16px 10px;
+          height: 65px;
+          color: $color-white;
+          i {
+            display: inline-block;
+          }
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -12px;
+            padding-left: 8px;
+            font-size: em(18,16);
+          }
+        }
+        .before, .after {
+          display: block;
+          float: left;
+          width: 25px;
+          height: 65px;
+        }
+        &.active, &:hover {
+          a {
+            background-color: $color-menu-active-bg;
+            color: $color-header-dark;
+          }
+          .before, .after {
+            width: 0;
+            height: 0;
+          }
+          .before {
+            @include angleside(1, 25px, 65px, $color-menu-active-bg, transparent);
+          }
+          .after {
+            @include angleside(-1, 25px, 65px, $color-menu-active-bg, transparent);
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
