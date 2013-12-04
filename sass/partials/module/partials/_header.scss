@@ -65,7 +65,10 @@ header {
       }
       font-family: $font-family-headers;
       font-weight: 400;
-      font-size: em(56,16);
+      font-size: em(48,16);
+      @include breakpoint($break-small) {
+        font-size: em(56,16);
+      }
     }
   }
 }
