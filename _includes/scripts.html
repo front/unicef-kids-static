@@ -1,5 +1,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/fastclick.js"></script>
 
 <script>
   /* Menu overlay toggle */
@@ -10,4 +11,7 @@
       $('body').addClass('open-menu');
     }
   };
+
+  /* Fastclick */
+  (function(){ FastClick.attach(document.body); })();
 </script>
