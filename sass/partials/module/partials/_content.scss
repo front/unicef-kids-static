@@ -50,10 +50,12 @@
 
 .stories {
   //@include background-grid;
-  padding: 0 20px 35px;
-  @include breakpoint($break-medium) {
-    padding-left: 0;
-    padding-right: 0;
+  .l-container {
+    padding: 0 20px 35px;
+    @include breakpoint($break-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   .story {
     margin-top: 35px;
@@ -67,10 +69,12 @@
 }
 
 .content {
-  padding: 15px 20px 30px;
-  @include breakpoint($break-medium) {
-    padding-left: 0;
-    padding-right: 0;
+  .l-container {
+    padding: 15px 20px 30px;
+    @include breakpoint($break-medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   p {
     line-height: 1.8em;

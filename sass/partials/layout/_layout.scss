@@ -14,3 +14,9 @@ body {
     margin-right: auto;
   }
 }
+
+@include breakpoint(max-width $break-small) {
+  body.open-menu .l-container {
+    margin-left: 50%;
+  }
+}

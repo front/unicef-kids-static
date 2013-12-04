@@ -4,12 +4,10 @@
 <script>
   /* Menu overlay toggle */
   window.toggleMenu = function () {
-    var overlay = $('.expanded-menu');
-    if(overlay.is(':visible')) {
-      overlay.hide();
-    }
-    else {
-      overlay.show();
+    if($('.expanded-menu').is(':visible')) {
+      $('body').removeClass('open-menu');
+    } else {
+      $('body').addClass('open-menu');
     }
   };
 </script>
