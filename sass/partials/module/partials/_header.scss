@@ -63,7 +63,7 @@ header {
       }
       font-family: $font-family-headers;
       font-weight: 400;
-      font-size: 56px;
+      font-size: em(56,16);
     }
   }
 }
