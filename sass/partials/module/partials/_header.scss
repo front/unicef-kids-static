@@ -6,42 +6,44 @@
   }
 }
 .dark-blue-block {
-  background-color: $color-blue-dark;
+  background-color: $color-menu-bg;
   @include breakpoint($break-medium) {
-    @include doublebgcolor($color-blue-darkest, $color-blue-dark);
+    @include doublebgcolor($color-menu-alt-bg, $color-menu-bg);
   }
 }
 
 header {
   @include breakpoint($break-small) {
-    border-top: 5px solid $color-header-border;
+    border-top: 5px solid $color-headers-alt-bg;
   }
   .unicef-home {
+    @extend .clearfix;
     display: none;
     @include breakpoint($break-small) {
       display: block;
       position: absolute;
       right: 0;
       padding: 0;
-      width: 250px;
       background-color: $color-headers-alt-bg;
 
-      .before {
+      span {
+        display: block;
         float: left;
-        @include angleside(-1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+        padding: 0 12px;
+        font-size: em(14,16);
+        line-height: 28px;
+        color: $color-header-alt;
+      }
+      .before {
+        @include angleside(-1, 15px, 30px, $color-headers-bg, transparent);
       }
       .after {
-        float: right;
-        @include angleside(1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+        @include angleside(1, 15px, 30px, $color-headers-bg, transparent);
       }
       img {
-        float: right;
+        display: block;
+        float: left;
         margin: 0 10px 0 0;
-      }
-      a {
-        font-size: em(14,16);
-        padding: 20px 8px;
-        color: $color-blue;
       }
     }
   }
@@ -57,7 +59,7 @@ header {
       padding: 22px 0 15px;
     }
     a {
-      color: $color-blue;
+      color: $color-header-alt;
       @include breakpoint($break-small) {
         color: $color-header;
       }

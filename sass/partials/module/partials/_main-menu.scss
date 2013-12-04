@@ -7,7 +7,7 @@
   width: 50%;
   height: 100%;
   overflow: scroll;
-  background-color: $color-blue-dark;
+  background-color: $color-menu-bg;
   display: none;
   ul {
     margin: 0;
@@ -23,8 +23,8 @@
         span {
           display: block;
           padding: 20px 15px;
-          border-top: 1px solid $color-white;
-          color: $color-white;
+          border-top: 1px solid $color-menu-separator;
+          color: $color-menu-item;
         }
       }
       &:first-child a span {
@@ -61,7 +61,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            color: $color-white;
+            color: $color-menu-item;
             border-top: none;
             padding: 4px 8px;
             background: rgba(0,0,0,0.7);
@@ -85,8 +85,8 @@
           width: 100%;
           height: auto;
           padding: 9px 0;
-          border-top: 1px solid $color-blue;
-          color: $color-white;
+          border-top: 1px solid $color-menu-sep-alt;
+          color: $color-menu-item;
         }
         &:first-child a {
           padding-top: 0;

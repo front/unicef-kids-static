@@ -211,18 +211,18 @@ body {
 }
 
 /* line 53, ../sass/partials/module/partials/_helper-classes.scss */
-.clearfix, .g-half, .g-third {
+.clearfix, .g-half, .g-third, header .unicef-home {
   *zoom: 1;
 }
 /* line 58, ../sass/partials/module/partials/_helper-classes.scss */
-.clearfix:before, .g-half:before, .g-third:before, .clearfix:after, .g-half:after, .g-third:after {
+.clearfix:before, .g-half:before, .g-third:before, header .unicef-home:before, .clearfix:after, .g-half:after, .g-third:after, header .unicef-home:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
 /* line 64, ../sass/partials/module/partials/_helper-classes.scss */
-.clearfix:after, .g-half:after, .g-third:after {
+.clearfix:after, .g-half:after, .g-third:after, header .unicef-home:after {
   clear: both;
 }
 
@@ -390,58 +390,59 @@ header .unicef-home {
     position: absolute;
     right: 0;
     padding: 0;
-    width: 250px;
     background-color: white;
   }
   /* line 29, ../sass/partials/module/partials/_header.scss */
-  header .unicef-home .before {
+  header .unicef-home span {
+    display: block;
     float: left;
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 30px solid #009eff;
-    border-right: 15px solid white;
-  }
-  /* line 33, ../sass/partials/module/partials/_header.scss */
-  header .unicef-home .after {
-    float: right;
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 30px solid #009eff;
-    border-left: 15px solid white;
-  }
-  /* line 37, ../sass/partials/module/partials/_header.scss */
-  header .unicef-home img {
-    float: right;
-    margin: 0 10px 0 0;
-  }
-  /* line 41, ../sass/partials/module/partials/_header.scss */
-  header .unicef-home a {
+    padding: 0 12px;
     font-size: 0.875em;
-    padding: 20px 8px;
+    line-height: 28px;
     color: #009eff;
   }
+  /* line 37, ../sass/partials/module/partials/_header.scss */
+  header .unicef-home .before {
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #009eff;
+    border-right: 15px solid transparent;
+  }
+  /* line 40, ../sass/partials/module/partials/_header.scss */
+  header .unicef-home .after {
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #009eff;
+    border-left: 15px solid transparent;
+  }
+  /* line 43, ../sass/partials/module/partials/_header.scss */
+  header .unicef-home img {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+  }
 }
-/* line 49, ../sass/partials/module/partials/_header.scss */
+/* line 51, ../sass/partials/module/partials/_header.scss */
 header .main-logo {
   padding: 8px 0 6px;
   text-align: center;
 }
 @media (min-width: 480px) {
-  /* line 49, ../sass/partials/module/partials/_header.scss */
+  /* line 51, ../sass/partials/module/partials/_header.scss */
   header .main-logo {
     padding: 8px 0 6px 60px;
     text-align: left;
   }
 }
 @media (min-width: 960px) {
-  /* line 49, ../sass/partials/module/partials/_header.scss */
+  /* line 51, ../sass/partials/module/partials/_header.scss */
   header .main-logo {
     padding: 22px 0 15px;
   }
 }
-/* line 59, ../sass/partials/module/partials/_header.scss */
+/* line 61, ../sass/partials/module/partials/_header.scss */
 header .main-logo a {
   color: #009eff;
   font-family: "Passion One", Verdana, sans-serif;
@@ -449,7 +450,7 @@ header .main-logo a {
   font-size: 3.5em;
 }
 @media (min-width: 480px) {
-  /* line 59, ../sass/partials/module/partials/_header.scss */
+  /* line 61, ../sass/partials/module/partials/_header.scss */
   header .main-logo a {
     color: white;
   }
@@ -477,6 +478,7 @@ header .main-logo a {
 /* line 13, ../sass/partials/module/partials/_top-menu.scss */
 .top-menu ul li.more a {
   color: #009eff;
+  font-size: 1.125em;
 }
 @media (min-width: 480px) {
   /* line 13, ../sass/partials/module/partials/_top-menu.scss */
@@ -490,12 +492,12 @@ header .main-logo a {
     position: relative;
     height: 65px;
   }
-  /* line 26, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 27, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul {
     width: 100%;
     margin: 0;
   }
-  /* line 29, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 30, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li {
     list-style: none;
     display: block;
@@ -504,11 +506,11 @@ header .main-logo a {
     padding: 0;
     text-transform: uppercase;
   }
-  /* line 36, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 37, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li.more {
     display: none;
   }
-  /* line 39, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 40, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li a {
     display: block;
     float: left;
@@ -516,17 +518,16 @@ header .main-logo a {
     height: 65px;
     color: white;
   }
-  /* line 45, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 46, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li a i {
     display: inline-block;
   }
-  /* line 48, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 49, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li a span {
     display: inline-block;
     vertical-align: middle;
     margin-top: -12px;
     padding-left: 8px;
-    font-size: 1.125em;
   }
   /* line 56, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li .before, .top-menu ul li .after {

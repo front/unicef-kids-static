@@ -11,9 +11,10 @@
       &.more {
         display: block;
         a {
-          color: $color-blue;
+          color: $color-header-alt;
+          font-size: em(18,16);
           @include breakpoint($break-small) {
-            color: $color-white;
+            color: $color-menu-item;
           }
         }
       }
@@ -41,7 +42,7 @@
           float: left;
           padding: 16px 10px;
           height: 65px;
-          color: $color-white;
+          color: $color-menu-item;
           i {
             display: inline-block;
           }
@@ -50,7 +51,6 @@
             vertical-align: middle;
             margin-top: -12px;
             padding-left: 8px;
-            font-size: em(18,16);
           }
         }
         .before, .after {
@@ -62,7 +62,7 @@
         &.active, &:hover {
           a {
             background-color: $color-menu-active-bg;
-            color: $color-header-dark;
+            color: $color-menu-active;
           }
           .before, .after {
             width: 0;
