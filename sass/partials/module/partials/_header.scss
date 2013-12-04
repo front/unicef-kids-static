@@ -1,50 +1,70 @@
 
-header {
-  border-top: 5px solid $color-header-border;
+.light-blue-block {
+  background-color: $color-webpage-bg;
+  @include breakpoint($break-small) {
+    background-color: $color-headers-bg;
+  }
+}
+.dark-blue-block {
+  background-color: $color-blue-dark;
+  @include breakpoint($break-medium) {
+    @include doublebgcolor($color-blue-darkest, $color-blue-dark);
+  }
 }
 
-.light-blue-block {
-  background-color: $color-headers-bg;
-  a {
-    color: $color-header;
+header {
+  @include breakpoint($break-small) {
+    border-top: 5px solid $color-header-border;
   }
-
   .unicef-home {
-    position: absolute;
-    right: 0;
-    width: 250px;
-    padding: 0;
-    background-color: $color-headers-alt-bg;
+    display: none;
+    @include breakpoint($break-small) {
+      display: block;
+      position: absolute;
+      right: 0;
+      padding: 0;
+      width: 250px;
+      background-color: $color-headers-alt-bg;
 
-    .before {
-      float: left;
-      @include angleside(-1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
-    }
-    .after {
-      float: right;
-      @include angleside(1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
-    }
-
-    img {
-      float: right;
-      margin: 0 10px 0 0;
-    }
-    a {
-      font-size: em(14,16);
-      padding: 20px 8px;
-      color: $color-blue;
+      .before {
+        float: left;
+        @include angleside(-1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+      }
+      .after {
+        float: right;
+        @include angleside(1, 15px, 30px, $color-headers-bg, $color-headers-alt-bg);
+      }
+      img {
+        float: right;
+        margin: 0 10px 0 0;
+      }
+      a {
+        font-size: em(14,16);
+        padding: 20px 8px;
+        color: $color-blue;
+      }
     }
   }
 
   .main-logo {
-    color: $color-header;
-    padding: 22px 0 15px;
-    font-family: $font-family-headers;
-    font-weight: 400;
-    font-size: 56px;
+    padding: 8px 0 6px;
+    text-align: center;
+    @include breakpoint($break-small) {
+      padding: 8px 0 6px 60px;
+      text-align: left;
+    }
+    @include breakpoint($break-medium) {
+      padding: 22px 0 15px;
+    }
+    a {
+      color: $color-blue;
+      @include breakpoint($break-small) {
+        color: $color-header;
+      }
+      font-family: $font-family-headers;
+      font-weight: 400;
+      font-size: 56px;
+    }
   }
 }
 
-.dark-blue-block {
-  @include doublebgcolor($color-blue-darkest, $color-blue-dark);
-}

@@ -37,10 +37,3 @@
   background: linear-gradient(to right, $color1 50%,$color2 50%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 );
 }
-
-@mixin heighttrans($time) {
-  -moz-transition:height $time, -moz-transform $time;
-  -webkit-transition:height $time, -webkit-transform $time;
-  -o-transition:height $time, -o-transform $time;
-  transition:height $time, transform $time;
-}

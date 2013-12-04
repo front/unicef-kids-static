@@ -15,8 +15,7 @@
   background-color: $color-blue;
   color: $color-white;
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     background-color: darken($color-blue, 10);
   }
 }

@@ -6,12 +6,15 @@
   background-color: $color-yellow;
 }
 
-
 .hero {
-  padding: 60px 0;
-
+  padding: 20px;
+  @include breakpoint($break-medium) {
+    padding: 60px 0;
+  }
   .teaser p {
-    width: 450px;
+    @include breakpoint($break-medium) {
+      width: 450px;
+    }
     font-size: em(20,16);
     font-weight: 300;
     line-height: 30px;
@@ -24,27 +27,34 @@
     }
   }
   img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
-  &.offset {
-    padding-left: 295px;
-    .teaser p {
-      width: 540px;
+    display: none;
+    @include breakpoint($break-medium) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
-    img {
-      left: 0;
+  }
+  @include breakpoint($break-medium) {
+    &.offset {
+      padding-left: 295px;
+      .teaser p {
+        width: 540px;
+      }
+      img {
+        left: 0;
+      }
     }
   }
 }
 
-
 .stories {
   //@include background-grid;
-  margin-bottom: 35px;
-
+  padding: 0 20px 35px;
+  @include breakpoint($break-medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .story {
     margin-top: 35px;
     img {
@@ -57,12 +67,14 @@
 }
 
 .content {
-  padding: 35px 0;
-
+  padding: 15px 20px 30px;
+  @include breakpoint($break-medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   p {
     line-height: 1.8em;
   }
-
   .teaser {
     margin: 20px 0;
     p {

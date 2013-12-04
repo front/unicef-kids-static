@@ -1,8 +1,5 @@
 // Change singularity default setting from isolated to float. Read more about it
 // on https://github.com/Team-Sass/Singularity/wiki/Output-Styles#float
-$output: 'float';
-$grids: 12;
-$gutters: 1;
 
 // Items per row 1
 .g-full {
@@ -15,9 +12,15 @@ $gutters: 1;
   @extend .clearfix;
 
   .g-item {
+    @include breakpoint($break-small $break-medium) {
+      @include grid-span(4);
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+
     @include breakpoint($break-medium) {
       @include grid-span(6);
-
       &:nth-of-type(2n) {
         margin-right: 0;
         padding-left: 20px;
@@ -31,10 +34,8 @@ $gutters: 1;
   @extend .clearfix;
 
   .g-item {
-
     @include breakpoint($break-small $break-medium) {
       @include grid-span(6);
-
       &:nth-of-type(2n) {
         margin-right: 0;
       }
@@ -42,11 +43,9 @@ $gutters: 1;
 
     @include breakpoint($break-medium) {
       @include grid-span(4);
-
       &:nth-of-type(3n) {
         margin-right: 0;
       }
     }
-
   }
 }

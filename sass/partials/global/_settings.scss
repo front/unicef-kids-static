@@ -19,24 +19,9 @@ $break-medium: $breakpoint-tablet-landscape;
 $break-large:  $breakpoint-desktop;
 
 // Grid Settings
-
-// // Mobile (Portrait)
-// $grids: 4;
-
-// // Mobile (Landscape)
-// $grids: add-grid(6 at $breakpoint-mobile-landscape);
-
-// // Tablet (Portrait)
-// $grids: add-grid(9 at $breakpoint-tablet-portrait);
-
-// // Tablet (Landscape)
-// $grids: add-grid(12 at $breakpoint-tablet-landscape);
-
-// // Desktop
-// $grids: add-grid(16 at $breakpoint-desktop);
-
 $grids: 12;
-$gutters: 1/3;
+$gutters: 1;
+$output: 'float';
 
 // Include grid-toggle mixin
 // @include grid-toggle;
