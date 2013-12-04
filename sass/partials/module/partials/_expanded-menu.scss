@@ -2,17 +2,16 @@
 .expanded-menu {
   position: fixed;
   z-index: 10;
-  overflow: scroll;
-  height: 100%;
   top: 0;
+  height: 100%;
+  overflow: scroll;
   background-color: $color-blue-dark;
-
+  display: none;
   ul {
     margin: 0;
     padding: 0;
     li {
       list-style: none;
-      display: block;
       a {
         position: relative;
         display: block;
@@ -41,7 +40,6 @@
     position: relative;
     overflow: hidden;
     background-color: transparent;
-    height: 0;
     ul {
       padding-bottom: 26px;
       li {

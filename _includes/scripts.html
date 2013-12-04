@@ -5,6 +5,11 @@
   /* Menu overlay toggle */
   window.toggleMenu = function () {
     var overlay = $('.expanded-menu');
-    overlay.height(overlay.height() ? 0 : 'auto');
+    if(overlay.is(':visible')) {
+      overlay.hide();
+    }
+    else {
+      overlay.show();
+    }
   };
 </script>
