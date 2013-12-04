@@ -31,15 +31,15 @@
 
       <nav class="main-menu">
         <ul>
-          <li class="active">
+          <li class="{% if page.tab == 1 %}active{% endif %}">
             <span class="before"></span>
-            <a href="index.html">
+            <a href="/">
               <i class="fa fa-gavel fa-2x"></i>
               <span>Barns rettigheter<span>
             </a>
             <span class="after">
           </li>
-          <li>
+          <li class="{% if page.tab == 2 %}active{% endif %}">
             <span class="before"></span>
             <a href="content.html">
               <i class="fa fa-globe fa-2x"></i>
@@ -47,9 +47,9 @@
             </a>
             <span class="after"></span>
           </li>
-          <li>
+          <li class="{% if page.tab == 3 %}active{% endif %}">
             <span class="before"></span>
-            <a href="">
+            <a href="/">
               <i class="fa fa-thumbs-o-up fa-2x"></i>
               <span>Du kan<span>
             </a>
@@ -57,7 +57,7 @@
           </li>
           <li>
             <span class="before"></span>
-            <a href="#" onclick="toggleMenu();">
+            <a href="javascript:void(0)" onclick="toggleMenu();">
               <i class="fa fa-plus fa-2x"></i>
               <span>Mer</span>
             </a>
