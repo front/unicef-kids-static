@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-.l-container {
+.l-container, .p-container {
   //@include background-grid;
   position: relative;
   width: 100%;
@@ -15,8 +15,18 @@ body {
   }
 }
 
+.p-container {
+  padding: 15px 20px;
+  @include breakpoint($break-medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @include breakpoint(max-width $break-small) {
-  body.open-menu .l-container {
-    margin-left: 50%;
+  body.open-menu {
+    .l-container, .p-container {
+      margin-left: 50%;
+    }
   }
 }

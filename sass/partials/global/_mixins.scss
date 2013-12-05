@@ -28,12 +28,5 @@
 }
 
 @mixin doublebgcolor($color1, $color2) {
-  background: $color2;
-  background: -moz-linear-gradient(left, $color1 50%, $color2 50%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%,$color1), color-stop(50%,$color2));
-  background: -webkit-linear-gradient(left, $color1 50%,$color2 50%);
-  background: -o-linear-gradient(left, $color1 50%,$color2 50%);
-  background: -ms-linear-gradient(left, $color1 50%,$color2 50%);
-  background: linear-gradient(to right, $color1 50%,$color2 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 );
+  background-image: linear-gradient(left, color-stops($color1 50%, $color2 50%));
 }

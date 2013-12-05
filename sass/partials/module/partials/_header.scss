@@ -12,7 +12,7 @@
   }
 }
 
-header {
+.header {
   @include breakpoint($break-small) {
     border-top: 5px solid $color-headers-alt-bg;
   }

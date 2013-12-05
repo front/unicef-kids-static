@@ -6,21 +6,21 @@
   ul {
     margin: 16px 15px;
     padding: 0;
-    li {
-      display: none;
-      &.more {
-        display: block;
-        a {
-          color: $color-header-alt;
-          font-size: em(18,16);
-          @include breakpoint($break-small) {
-            color: $color-menu-item;
-          }
-        }
-      }
-    }
     @include breakpoint($break-small) {
       margin: 20px 15px;
+    }
+  }
+  li {
+    display: none;
+    &.more {
+      display: block;
+    }
+  }
+  a {
+    color: $color-header-alt;
+    font-size: em(18,16);
+    @include breakpoint($break-small) {
+      color: $color-menu-item;
     }
   }
 
@@ -47,11 +47,11 @@
           height: 65px;
           color: $color-menu-item;
           i {
+            font-weight: 400;
             display: inline-block;
           }
           span {
             display: inline-block;
-            vertical-align: middle;
             margin-top: -12px;
             padding-left: 8px;
           }

@@ -3,7 +3,8 @@
 
 // Items per row 1
 .g-full {
-  @include grid-span(12);
+  clear: both;
+  width: 100%;
 }
 
 
@@ -12,15 +13,15 @@
   @extend .clearfix;
 
   .g-item {
-    @include breakpoint($break-small $break-medium) {
-      @include grid-span(4);
+    @include breakpoint($break-small ($break-medium - 1px)) {
+      @include float-span(4);
       &:nth-of-type(3n) {
         margin-right: 0;
       }
     }
 
     @include breakpoint($break-medium) {
-      @include grid-span(6);
+      @include float-span(6);
       &:nth-of-type(2n) {
         margin-right: 0;
         padding-left: 20px;
@@ -34,15 +35,15 @@
   @extend .clearfix;
 
   .g-item {
-    @include breakpoint($break-small $break-medium) {
-      @include grid-span(6);
+    @include breakpoint($break-small ($break-medium - 1px)) {
+      @include float-span(6);
       &:nth-of-type(2n) {
         margin-right: 0;
       }
     }
 
     @include breakpoint($break-medium) {
-      @include grid-span(4);
+      @include float-span(4);
       &:nth-of-type(3n) {
         margin-right: 0;
       }

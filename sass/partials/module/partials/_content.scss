@@ -9,7 +9,8 @@
 .hero {
   padding: 20px;
   @include breakpoint($break-medium) {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .teaser p {
     @include breakpoint($break-medium) {
@@ -49,54 +50,29 @@
 }
 
 .stories {
-  //@include background-grid;
-  .l-container {
-    padding: 0 20px 35px;
-    @include breakpoint($break-medium) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
   .story {
-    margin-top: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     img {
       width: 100%
     }
     .info {
-      padding: 10px 0 0;
+      padding-top: 10px;
     }
   }
 }
 
-.content {
-  .l-container {
-    padding: 15px 20px 30px;
-    @include breakpoint($break-medium) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
+.article {
+  padding: 20px 0 30px;
   p {
     line-height: 1.8em;
   }
   .teaser {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     p {
       font-size: em(20,16);
       font-weight: 300;
-    }
-  }
-  .quote {
-    margin: 40px 0;
-    margin-left: -30px;
-    padding-left: 20px;
-    border-left: 10px solid $color-orange;
-
-    p {
-      font-size: em(18,16);
-      font-weight: 300;
-      line-height: 1.8em;
-      color: $color-orange;
     }
   }
 }
