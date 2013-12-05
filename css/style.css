@@ -521,13 +521,13 @@ body {
   }
   /* line 49, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li a i {
-    font-weight: 400;
     display: inline-block;
   }
-  /* line 53, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 52, ../sass/partials/module/partials/_top-menu.scss */
   .top-menu ul li a span {
     display: inline-block;
-    margin-top: -12px;
+    vertical-align: middle;
+    margin-top: -14px;
     padding-left: 8px;
   }
   /* line 59, ../sass/partials/module/partials/_top-menu.scss */
@@ -818,7 +818,7 @@ body.open-menu .main-menu {
 }
 
 /* line 2, ../sass/partials/module/partials/_footer.scss */
-footer {
+.footer {
   padding: 10px;
   text-align: center;
   font-size: 0.875em;

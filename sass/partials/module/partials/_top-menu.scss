@@ -47,12 +47,12 @@
           height: 65px;
           color: $color-menu-item;
           i {
-            font-weight: 400;
             display: inline-block;
           }
           span {
             display: inline-block;
-            margin-top: -12px;
+            vertical-align: middle;
+            margin-top: -14px;
             padding-left: 8px;
           }
         }
