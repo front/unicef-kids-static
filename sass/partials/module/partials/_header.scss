@@ -1,15 +1,6 @@
 
 .light-blue-block {
-  background-color: $color-webpage-bg;
-  @include breakpoint($break-small) {
-    background-color: $color-headers-bg;
-  }
-}
-.dark-blue-block {
-  background-color: $color-menu-bg;
-  @include breakpoint($break-medium) {
-    @include doublebgcolor($color-menu-alt-bg, $color-menu-bg);
-  }
+  background-color: $color-headers-bg;
 }
 
 .header {
@@ -44,6 +35,7 @@
         display: block;
         float: left;
         margin: 0 10px 0 0;
+        width: 90px;
       }
     }
   }
@@ -59,10 +51,7 @@
       padding: 22px 0 15px;
     }
     a {
-      color: $color-header-alt;
-      @include breakpoint($break-small) {
-        color: $color-header;
-      }
+      color: $color-header;
       font-family: $font-family-headers;
       font-weight: 400;
       font-size: em(48,16);

@@ -1,5 +1,30 @@
+@mixin menuitem-color($color-bg, $color-text) {
+  a {
+    background-color: $color-bg;
+    color: $color-text;
+  }
+  .before {
+    @include angleside(1, $top-menu-side-width, $top-menu-side-heigth, $color-bg, transparent);
+  }
+  .after {
+    @include angleside(-1, $top-menu-side-width, $top-menu-side-heigth, $color-bg, transparent);
+  }
+}
+
+@mixin submenu-color($color-bg, $color-text) {
+  ul {
+    li {
+      border-top: 1px solid darken($color-bg, 5);
+      background-color: $color-bg;
+    }
+    a {
+      color: $color-text !important;
+    }
+  }
+}
 
 .top-menu {
+  @extend .clearfix;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,16 +42,12 @@
     }
   }
   a {
-    color: $color-header-alt;
+    color: $color-header;
     font-size: em(18,16);
-    @include breakpoint($break-small) {
-      color: $color-menu-item;
-    }
   }
 
   @include breakpoint($break-medium) {
     position: relative;
-    height: 65px;
     ul {
       width: 100%;
       margin: 0;
@@ -34,7 +55,7 @@
         list-style: none;
         display: block;
         float: left;
-        margin-left: -20px;
+        margin-left: 0px;
         padding: 0;
         text-transform: uppercase;
         &.more {
@@ -45,7 +66,7 @@
           float: left;
           padding: 16px 10px;
           height: 65px;
-          color: $color-menu-item;
+
           i {
             display: inline-block;
           }
@@ -56,32 +77,98 @@
             padding-left: 8px;
           }
         }
+
         .before, .after {
           display: block;
           float: left;
-          width: 25px;
-          height: 65px;
-        }
-        &.active, &:hover {
-          a {
-            background-color: $color-menu-active-bg;
-            color: $color-menu-active;
-          }
-          .before, .after {
             width: 0;
             height: 0;
+        }
+
+        ul {
+          display: none;
+        }
+        &:nth-child(1) {
+          @include menuitem-color($color-green, $color-black);
+          @include submenu-color($color-green, $color-black);
+        }
+        &:nth-child(2) {
+          @include menuitem-color($color-pink, $color-white);
+          @include submenu-color($color-pink, $color-white);
+        }
+        &:nth-child(3) {
+          @include menuitem-color($color-yellow, $color-black);
+          @include submenu-color($color-yellow, $color-black);
+        }
+        &:nth-child(4) {
+          @include menuitem-color($color-blue, $color-white);
+        }
+
+        &:hover ul {
+          display: none;
+          position: absolute;
+          z-index: 100;
+          top: 65px;
+          width: 310px;
+          li {
+            width: 100%;
+            display: block;
+            clear: both;
           }
-          .before {
-            @include angleside(1, 25px, 65px, $color-menu-active-bg, transparent);
+          a {
+            background: transparent !important;
+            height: auto;
+            padding: 14px;
+            font-size: em(14,16);
           }
-          .after {
-            @include angleside(-1, 25px, 65px, $color-menu-active-bg, transparent);
+        }
+        &.active ul {
+          display: none;
+          position: relative;
+          z-index: 100;
+          top: 0;
+          width: 100%;
+          li {
+            display: block;
+          }
+          a {
+            background: transparent !important;
+            height: auto;
+            padding: 14px;
+            font-size: em(14,16);
           }
         }
 
       }
+
+      &:hover {
+        li {
+          &:nth-child(1) {
+            @include menuitem-color(lighten($color-green,40), darken($color-green,10));
+            &:hover {
+              @include menuitem-color($color-green, $color-black);
+            }
+          }
+          &:nth-child(2) {
+            @include menuitem-color(lighten($color-pink,40), darken($color-pink,10));
+            &:hover {
+              @include menuitem-color($color-pink, $color-white);
+            }
+          }
+          &:nth-child(3) {
+            @include menuitem-color(lighten($color-yellow,30), darken($color-yellow,30));
+            &:hover {
+              @include menuitem-color($color-yellow, $color-black);
+            }
+          }
+          &:nth-child(4) {
+            @include menuitem-color(lighten($color-blue,40), darken($color-blue,10));
+            &:hover {
+              @include menuitem-color($color-blue, $color-white);
+            }
+          }
+        }
+      }
     }
   }
 }
-
-

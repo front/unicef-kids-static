@@ -7,14 +7,18 @@ $font-family-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Gran
 //  ***** Colors *****
 
 // Standalone
-$color-blue:          #009eff;
+$color-blue:          #008aff;
 $color-blue-dark:     darken($color-blue, 8);
 $color-blue-darkest:  darken($color-blue, 11);
 $color-blue-black:    darken($color-blue, 67);
 
-$color-green:         #62cd27;
-$color-orange:        #ff8901;
+$color-green:         #52c81c;
+$color-pink:          #ff008e;
 $color-yellow:        #ffff00;
+$color-orange:        #ff7300;
+$color-purple:        #25188c;
+$color-red:           #ff0000;
+// $color-green-alt:         #62cd27;
 
 $color-white:         white;
 $color-black:         black;
@@ -22,17 +26,16 @@ $color-black:         black;
 // Backgrounds
 $color-webpage-bg:      $color-white;
 
-$color-headers-bg:      $color-blue;
-$color-headers-alt-bg:  $color-white;
+$color-headers-bg:      $color-white;
+$color-headers-alt-bg:  $color-blue;
 
-$color-menu-bg:         $color-blue-dark;
+$color-menu-bg:         $color-blue;
 $color-menu-active-bg:  $color-blue-dark;
 $color-menu-alt-bg:     $color-blue-darkest;
 
 // Header
-$color-header:          $color-white;
-$color-header-alt:      $color-blue;
-$color-header-dark:     $color-blue-black;
+$color-header:          $color-blue;
+$color-header-alt:      $color-white;
 
 // Menu
 $color-menu-item:       $color-white;

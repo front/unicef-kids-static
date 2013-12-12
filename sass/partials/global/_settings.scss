@@ -20,7 +20,7 @@ $break-large:  $breakpoint-desktop;
 
 // Grid Settings
 $grids: 12;
-$gutters: 1;
+$gutters: .5;
 $output: 'float';
 
 // Include grid-toggle mixin
@@ -28,3 +28,8 @@ $output: 'float';
 
 // Typography
 $base-font-size: 14px;
+
+
+// Menu Settings
+$top-menu-side-width: 20px;
+$top-menu-side-heigth: 65px;

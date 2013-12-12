@@ -22,7 +22,7 @@
         <a href="">
           <span class="before"></span>
           <span>Til hovedsiden</span>
-          <img alt="Unicef Home" src="/img/unicef-small.jpg">
+          <img alt="Unicef Home" src="/img/unicef-small.png">
           <span class="after"></span>
         </a>
       </div>
@@ -39,23 +39,37 @@
               <i class="fa fa-gavel fa-2x"></i>
               <span>Barns rettigheter<span>
             </a>
-            <span class="after">
+            <span class="after"></span>
+            <div class="sub-menu">
+              <ul>
+                <li><a href="#">Historie</a></li>
+                <li><a href="#">Barnas rettigheter i Norge</a></li>
+              </ul>
+            </div>
           </li>
           <li class="{% if page.tab == 2 %}active{% endif %}">
             <span class="before"></span>
             <a href="content.html">
               <i class="fa fa-globe fa-2x"></i>
-              <span>Unicef og barn i verden</span>
+              <span>Barn i verden</span>
             </a>
             <span class="after"></span>
+            <div class="sub-menu">
+              <ul>
+                <li><a href="#">Dette er UNICEF</a></li>
+                <li><a href="#">Fatka om barn</a></li>
+                <li><a href="#">Barnearbeid</a></li>
+              </ul>
+            </div>
           </li>
           <li class="{% if page.tab == 3 %}active{% endif %}">
             <span class="before"></span>
             <a href="/">
-              <i class="fa fa-thumbs-o-up fa-2x"></i>
-              <span>Du kan<span>
+              <i class="fa fa-home fa-2x"></i>
+              <span>Unicef-runden<span>
             </a>
             <span class="after"></span>
+            <ul class="sub-menu"></ul>
           </li>
           <li>
             <span class="before"></span>
@@ -76,11 +90,10 @@
   </div>
 
   <div class="dark-blue-block">
-    <div class="l-container">
-      <nav class="main-menu">
-        <ul class="g-half">
+      <nav class="main-menu l-container">
+        <ul class="g-third">
           <li class="g-item">
-            <a href="/">
+            <a class="main-link" href="/">
               <img src="/img/story.jpg">
               <span>Barns rettigheter</span>
             </a>
@@ -90,9 +103,9 @@
             </ul>
           </li>
           <li class="g-item">
-            <a href="content.html">
+            <a class="main-link" href="content.html">
               <img src="/img/story-2.jpg">
-              <span>Unicef og barn i verden</span>
+              <span>Barn i verden</span>
             </a>
             <ul class="sub-menu">
               <li><a href="#">Dette er UNICEF</a></li>
@@ -101,25 +114,25 @@
             </ul>
           </li>
           <li class="g-item">
-            <a href="/">
+            <a class="main-link" href="/">
               <img src="/img/story-3.jpg">
+              <span>Unicef-runden</span>
+            </a>
+          </li>
+          <li class="g-item">
+            <a class="main-link" href="#">
+              <img src="/img/story.jpg">
               <span>Du kan</span>
             </a>
           </li>
           <li class="g-item">
-            <a href="#">
-              <img src="/img/story.jpg">
-              <span>FNs tusenårsmål</span>
-            </a>
-          </li>
-          <li class="g-item">
-            <a href="#">
+            <a class="main-link" href="#">
               <img src="/img/story-2.jpg">
-              <span>UNICEF-runden</span>
+              <span>FN's Turenårsmål</span>
             </a>
           </li>
           <li class="g-item">
-            <a href="#">
+            <a class="main-link" href="#">
               <img src="/img/story-3.jpg">
               <span>Kryssord og andre nøtter</span>
             </a>
@@ -134,7 +147,6 @@
           </li>
         </ul>
       </nav>
-    </div>
   </div>
 </header>
 

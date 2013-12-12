@@ -1,4 +1,22 @@
 
+@mixin mainmenu-color($color-bg, $color-text) {
+  background-color: $color-bg;
+  span {
+    background: rgba($color-bg, 0.7);
+    color: $color-text;
+  }
+  li {
+    border-top: 1px solid darken($color-bg, 10);
+    a {
+      color: $color-text;
+    }
+  }
+}
+
+.dark-blue-block {
+  background-color: $color-menu-bg;
+}
+
 .main-menu {
   position: fixed;
   z-index: 10;
@@ -47,25 +65,41 @@
     ul {
       padding-bottom: 26px;
       li {
-        margin-top: 36px;
+        margin-top: 30px;
         a {
-          float: left;
-          width: 150px;
-          height: 100px;
+          width: 100%;
+          padding: 7px 0;
           img {
             display: block;
             width: 100%;
-            height: 100%;
           }
           span {
             position: absolute;
-            bottom: 0;
+            bottom: 7px;
             width: 100%;
-            color: $color-menu-item;
             border-top: none;
-            padding: 4px 8px;
-            background: rgba(0,0,0,0.7);
+            padding: 15px 10px 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
           }
+        }
+        &:nth-child(1) {
+          @include mainmenu-color($color-green, $color-black);
+        }
+        &:nth-child(2) {
+          @include mainmenu-color($color-pink, $color-white);
+        }
+        &:nth-child(3) {
+          @include mainmenu-color($color-yellow, $color-black);
+        }
+        &:nth-child(4) {
+          @include mainmenu-color($color-orange, $color-white);
+        }
+        &:nth-child(5) {
+          @include mainmenu-color($color-purple, $color-white);
+        }
+        &:nth-child(6) {
+          @include mainmenu-color($color-red, $color-white);
         }
       }
     }
@@ -75,22 +109,21 @@
     display: none;
     @include breakpoint($break-medium) {
       display: block;
-      float: left;
-      width: 250px;
-      margin-left: 26px;
+      margin: 0;
       padding-bottom: 0;
       li {
         margin-top: 0;
+        background: none;
         a {
           width: 100%;
           height: auto;
-          padding: 9px 0;
-          border-top: 1px solid $color-menu-sep-alt;
-          color: $color-menu-item;
+          padding: 10px;
         }
-        &:first-child a {
-          padding-top: 0;
+        &:first-child {
           border-top: none;
+          a {
+            padding-top: 0;
+          }
         }
       }
     }
