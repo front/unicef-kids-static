@@ -9,9 +9,35 @@
       $('body').removeClass('open-menu');
     } else {
       $('body').addClass('open-menu');
+      setTimeout(adjustMainMenu, 50);
     }
   };
 
   /* Fastclick */
   (function(){ FastClick.attach(document.body); })();
+
+  /* Manual Masonry */
+  function adjustMainMenu() {
+    if($('.main-menu').attr('adjusted'))
+      return;
+
+    var gutter = 30;
+    var elems = $('.main-menu > ul > li').toArray();
+    // console.log(elems);
+
+    for(var i = 3, l = elems.length; i<l; i++) {
+      var elem = $(elems[i]);
+      var prev = $(elems[i-3]);
+      var margin = (prev.offset().top + prev.height()) - elem.offset().top + 2*gutter;
+
+      // console.log(prev.offset().top + ' - ' + prev.height() + ' - ' +
+      //  elem.offset().top + ' > ' + margin);
+
+      if(margin < gutter) {
+        elem.css('margin-top', margin + 'px');
+      }
+    }
+    $('.main-menu').attr('adjusted', true);
+  }
+
 </script>
