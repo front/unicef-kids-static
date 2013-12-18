@@ -29,6 +29,12 @@ body {
 
 a {
   text-decoration: none;
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
 }
 p {
   margin: 0;

@@ -1,9 +1,9 @@
 
-.light-blue-block {
+.page-header--top {
   background-color: $color-headers-bg;
 }
 
-.header {
+.page-header {
   @include breakpoint($break-small) {
     border-top: 5px solid $color-headers-alt-bg;
   }

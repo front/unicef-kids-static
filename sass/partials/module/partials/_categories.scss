@@ -1,0 +1,81 @@
+.category__1 {
+  @include mainmenu-color($category-color-1);
+}
+.category__2 {
+  @include mainmenu-color($category-color-2);
+}
+.category__3 {
+  @include mainmenu-color($category-color-3);
+}
+.category__4 {
+  @include mainmenu-color($category-color-4);
+}
+.category__5 {
+  @include mainmenu-color($category-color-5);
+}
+.category__6 {
+  @include mainmenu-color($category-color-6);
+}
+
+.category {
+  font-weight: 600;
+}
+
+.category--main-link {
+  position: relative;
+  display: block;
+
+  img {
+    display: none;
+  }
+
+  span {
+    @extend .btn;
+    display: block;
+    border-top: 1px solid $color-menu-separator;
+    color: $color-menu-item;
+    margin: 0 $space-half;
+  }
+
+  @include breakpoint($break-small) {
+    @include border-radius($space-half);
+    width: 100%;
+    padding: $space-half 0 0;
+
+    img {
+      display: block;
+      width: 100%;
+      @include border-radius(0 0 $space-half $space-half);
+    }
+    
+    span {
+      position: absolute;
+      bottom: 3%;
+      width: 96%;
+      margin-left: 2%;
+      border-top: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.category--sub-links li {
+  margin-top: ($space-half * .5);
+}
+
+.category--sub-link {
+  @extend .btn;
+  width: 100%;
+}
+
+.category--main-link span,
+.category--sub-link {
+  z-index: 100;
+  @include transition(all .2s ease-out);
+
+  &:hover,
+  &:focus {
+    margin-left: -($space-half);  
+  }
+}
