@@ -16,7 +16,7 @@
       right: 0;
       padding: 0;
       background-color: $color-headers-alt-bg;
-      @include border-radius(0 0 10px 10px);
+      @include border-radius(0 0 $space $space);
 
       span {
         display: block;

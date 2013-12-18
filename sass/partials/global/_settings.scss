@@ -27,8 +27,12 @@ $output: 'float';
 // @include grid-toggle;
 
 // Typography
-$base-font-size: 14px;
+$base-font-size: 16px;
 
+// Space
+$space: $base-font-size;
+$space-half: $space * .5;
+$space-double: $space * 2;
 
 // Menu Settings
 $top-menu-side-width: 20px;

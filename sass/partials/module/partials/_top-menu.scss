@@ -1,17 +1,12 @@
-@mixin menuitem-color($color-bg, $color-text) {
+@mixin menuitem-color($color-bg, $color-text: $menu-color) {
   a {
     background-color: $color-bg;
     color: $color-text;
-  }
-  .before {
-    @include angleside(1, $top-menu-side-width, $top-menu-side-heigth, $color-bg, transparent);
-  }
-  .after {
-    @include angleside(-1, $top-menu-side-width, $top-menu-side-heigth, $color-bg, transparent);
+    @include border-radius($space-double $space-double 0 0);
   }
 }
 
-@mixin submenu-color($color-bg, $color-text) {
+@mixin submenu-color($color-bg, $color-text: $menu-color) {
   ul {
     li {
       border-top: 1px solid darken($color-bg, 5);
@@ -31,19 +26,23 @@
   ul {
     margin: 16px 15px;
     padding: 0;
+    
     @include breakpoint($break-small) {
       margin: 20px 15px;
     }
   }
+
   li {
     display: none;
     &.more {
       display: block;
     }
   }
+
   a {
     color: $color-header;
-    font-size: em(18,16);
+    font-size: em(18);
+    font-weight: 600;
   }
 
   @include breakpoint($break-medium) {
@@ -51,124 +50,109 @@
     ul {
       width: 100%;
       margin: 0;
-      li {
-        list-style: none;
-        display: block;
-        float: left;
-        margin-left: 0px;
-        padding: 0;
-        text-transform: uppercase;
-        &.more {
-          display: none;
-        }
-        a {
-          display: block;
-          float: left;
-          padding: 16px 10px;
-          height: 65px;
+    }
 
-          i {
-            display: inline-block;
-          }
-          span {
-            display: inline-block;
-            vertical-align: middle;
-            margin-top: -14px;
-            padding-left: 8px;
-          }
-        }
+    li {
+      list-style: none;
+      display: block;
+      float: left;
+      margin-left: 0px;
+      padding: 0;
+      text-transform: uppercase;
 
-        .before, .after {
-          display: block;
-          float: left;
-            width: 0;
-            height: 0;
-        }
-
-        ul {
-          display: none;
-        }
-        &:nth-child(1) {
-          @include menuitem-color($color-green, $color-black);
-          @include submenu-color($color-green, $color-black);
-        }
-        &:nth-child(2) {
-          @include menuitem-color($color-pink, $color-white);
-          @include submenu-color($color-pink, $color-white);
-        }
-        &:nth-child(3) {
-          @include menuitem-color($color-yellow, $color-black);
-          @include submenu-color($color-yellow, $color-black);
-        }
-        &:nth-child(4) {
-          @include menuitem-color($color-blue, $color-white);
-        }
-
-        &:hover ul {
-          display: none;
-          position: absolute;
-          z-index: 100;
-          top: 65px;
-          width: 310px;
-          li {
-            width: 100%;
-            display: block;
-            clear: both;
-          }
-          a {
-            background: transparent !important;
-            height: auto;
-            padding: 14px;
-            font-size: em(14,16);
-          }
-        }
-        &.active ul {
-          display: none;
-          position: relative;
-          z-index: 100;
-          top: 0;
-          width: 100%;
-          li {
-            display: block;
-          }
-          a {
-            background: transparent !important;
-            height: auto;
-            padding: 14px;
-            font-size: em(14,16);
-          }
-        }
-
+      + li {
+        margin-left: $space;
+      }
+      
+      &.more {
+        display: none;
       }
 
-      &:hover {
-        li {
-          &:nth-child(1) {
-            @include menuitem-color(lighten($color-green,40), darken($color-green,10));
-            &:hover {
-              @include menuitem-color($color-green, $color-black);
-            }
-          }
-          &:nth-child(2) {
-            @include menuitem-color(lighten($color-pink,40), darken($color-pink,10));
-            &:hover {
-              @include menuitem-color($color-pink, $color-white);
-            }
-          }
-          &:nth-child(3) {
-            @include menuitem-color(lighten($color-yellow,30), darken($color-yellow,30));
-            &:hover {
-              @include menuitem-color($color-yellow, $color-black);
-            }
-          }
-          &:nth-child(4) {
-            @include menuitem-color(lighten($color-blue,40), darken($color-blue,10));
-            &:hover {
-              @include menuitem-color($color-blue, $color-white);
-            }
-          }
-        }
+      &:nth-child(1) {
+        @include menuitem-color($color-green);
+        @include submenu-color($color-green);
+      }
+      &:nth-child(2) {
+        @include menuitem-color($color-pink);
+        @include submenu-color($color-pink);
+      }
+      &:nth-child(3) {
+        @include menuitem-color($color-yellow);
+        @include submenu-color($color-yellow);
+      }
+      &:nth-child(4) {
+        @include menuitem-color($color-blue);
+      }
+    }
+
+    a {
+      display: block;
+      float: left;
+      padding: $space;
+      height: 55px;
+      line-height: 47px;
+      @include transition(all .2s ease-out);
+
+      i {
+        display: inline-block;
+        @include transition(all .2s ease-out);
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -14px;
+        padding-left: 8px;
+      }
+    }
+
+    .active a,
+    a:hover,
+    a:focus {
+      height: 65px;
+      margin-top: -10px;
+
+      i {
+        @include transform(rotate(-360deg));
       }
     }
   }
 }
+
+.sub-menu {
+  display: none;
+}
+// sub menu
+// &:hover ul {
+//   display: none;
+//   position: absolute;
+//   z-index: 100;
+//   top: 65px;
+//   width: 310px;
+//   li {
+//     width: 100%;
+//     display: block;
+//     clear: both;
+//   }
+//   a {
+//     background: transparent !important;
+//     height: auto;
+//     padding: 14px;
+//     font-size: em(14,16);
+//   }
+// }
+// &.active ul {
+//   display: none;
+//   position: relative;
+//   z-index: 100;
+//   top: 0;
+//   width: 100%;
+//   li {
+//     display: block;
+//   }
+//   a {
+//     background: transparent !important;
+//     height: 65px;
+//     padding: 14px;
+//     font-size: em(14,16);
+//   }
+// }
