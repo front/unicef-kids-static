@@ -365,8 +365,13 @@ body {
     right: 0;
     padding: 0;
     background-color: #008aff;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
   }
-  /* line 20, ../sass/partials/module/partials/_header.scss */
+  /* line 21, ../sass/partials/module/partials/_header.scss */
   .header .unicef-home span {
     display: block;
     float: left;
@@ -375,23 +380,7 @@ body {
     line-height: 28px;
     color: white;
   }
-  /* line 28, ../sass/partials/module/partials/_header.scss */
-  .header .unicef-home .before {
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 30px solid white;
-    border-right: 15px solid transparent;
-  }
-  /* line 31, ../sass/partials/module/partials/_header.scss */
-  .header .unicef-home .after {
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 30px solid white;
-    border-left: 15px solid transparent;
-  }
-  /* line 34, ../sass/partials/module/partials/_header.scss */
+  /* line 30, ../sass/partials/module/partials/_header.scss */
   .header .unicef-home img {
     display: block;
     float: left;
@@ -399,25 +388,25 @@ body {
     width: 90px;
   }
 }
-/* line 43, ../sass/partials/module/partials/_header.scss */
+/* line 39, ../sass/partials/module/partials/_header.scss */
 .header .main-logo {
   padding: 8px 0 6px;
   text-align: center;
 }
 @media (min-width: 480px) {
-  /* line 43, ../sass/partials/module/partials/_header.scss */
+  /* line 39, ../sass/partials/module/partials/_header.scss */
   .header .main-logo {
     padding: 8px 0 6px 60px;
     text-align: left;
   }
 }
 @media (min-width: 960px) {
-  /* line 43, ../sass/partials/module/partials/_header.scss */
+  /* line 39, ../sass/partials/module/partials/_header.scss */
   .header .main-logo {
     padding: 22px 0 15px;
   }
 }
-/* line 53, ../sass/partials/module/partials/_header.scss */
+/* line 49, ../sass/partials/module/partials/_header.scss */
 .header .main-logo a {
   color: #008aff;
   font-family: "Passion One", Verdana, sans-serif;
@@ -425,7 +414,7 @@ body {
   font-size: 3em;
 }
 @media (min-width: 480px) {
-  /* line 53, ../sass/partials/module/partials/_header.scss */
+  /* line 49, ../sass/partials/module/partials/_header.scss */
   .header .main-logo a {
     font-size: 3.5em;
   }

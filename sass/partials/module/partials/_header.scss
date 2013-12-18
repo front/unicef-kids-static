@@ -16,6 +16,7 @@
       right: 0;
       padding: 0;
       background-color: $color-headers-alt-bg;
+      @include border-radius(0 0 10px 10px);
 
       span {
         display: block;
@@ -25,12 +26,7 @@
         line-height: 28px;
         color: $color-header-alt;
       }
-      .before {
-        @include angleside(-1, 15px, 30px, $color-headers-bg, transparent);
-      }
-      .after {
-        @include angleside(1, 15px, 30px, $color-headers-bg, transparent);
-      }
+
       img {
         display: block;
         float: left;
