@@ -14,7 +14,7 @@
       <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
 </head>
-<body>
+<body class="{% case page.tab %}{% when 1 %}active-category-1{% when 2 %}active-category-2{% when 3 %}active-category-3{% else %}active-category-default{% endcase %}">
 <header class="page-header">
   <div class="page-header--top">
     <div class="l-container">
@@ -29,42 +29,42 @@
         <a href="/">UNICEF KIDS</a>
       </div>
 
-      <nav class="top-menu">
+      <nav class="menu-tabs">
         <ul>
-          <li class="{% if page.tab == 1 %}active{% endif %}">
-            <a href="/">
+          <li class="{% if page.tab == 1 %}active{% endif %} menu-tab menu-tab__category-1">
+            <a class="menu-tab--link" href="/">
               <i class="fa fa-gavel fa-2x"></i>
               <span>Barns rettigheter<span>
             </a>
-            <div class="sub-menu">
+            <div class="sub-menu menu-tab--sub">
               <ul>
-                <li><a href="#0">Historie</a></li>
-                <li><a href="#0">Barnas rettigheter i Norge</a></li>
+                <li><a class="menu-tab--sub-link" href="#0">Historie</a></li>
+                <li><a class="menu-tab--sub-link" href="#0">Barnas rettigheter i Norge</a></li>
               </ul>
             </div>
           </li>
-          <li class="{% if page.tab == 2 %}active{% endif %}">
-            <a href="content.html">
+          <li class="{% if page.tab == 2 %}active{% endif %} menu-tab menu-tab__category-2">
+            <a class="menu-tab--link" href="content.html">
               <i class="fa fa-globe fa-2x"></i>
               <span>Barn i verden</span>
             </a>
-            <div class="sub-menu">
+            <div class="sub-menu menu-tab--sub">
               <ul>
-                <li><a href="#0">Dette er UNICEF</a></li>
-                <li><a href="#0">Fatka om barn</a></li>
-                <li><a href="#0">Barnearbeid</a></li>
+                <li><a class="menu-tab--sub-link" href="#0">Dette er UNICEF</a></li>
+                <li><a class="menu-tab--sub-link" href="#0">Fatka om barn</a></li>
+                <li><a class="menu-tab--sub-link" href="#0">Barnearbeid</a></li>
               </ul>
             </div>
           </li>
-          <li class="{% if page.tab == 3 %}active{% endif %}">
-            <a href="/">
+          <li class="{% if page.tab == 3 %}active{% endif %} menu-tab menu-tab__category-3">
+            <a class="menu-tab--link" href="/">
               <i class="fa fa-home fa-2x"></i>
               <span>Unicef-runden<span>
             </a>
-            <ul class="sub-menu"></ul>
+            <ul class="sub-menu menu-tab--sub"></ul>
           </li>
-          <li>
-            <a href="javascript:void(0)" onclick="toggleMenu();">
+          <li class="menu-tab menu-tab__category-default">
+            <a class="menu-tab--link" href="javascript:void(0)" onclick="toggleMenu();">
               <span>Mer +</span>
             </a>
           </li>
@@ -86,7 +86,7 @@
               <img src="/img/story.jpg">
               <span>Barns rettigheter</span>
             </a>
-            <ul class="sub-menu category--sub-links">
+            <ul class="category--sub-links">
               <li><a href="#0" class="category--sub-link">Historie</a></li>
               <li><a href="#0" class="category--sub-link">Barnas rettigheter i Norge</a></li>
             </ul>
@@ -96,7 +96,7 @@
               <img src="/img/story-2.jpg">
               <span>Barn i verden</span>
             </a>
-            <ul class="sub-menu category--sub-links">
+            <ul class="category--sub-links">
               <li><a href="#0" class="category--sub-link">Dette er UNICEF</a></li>
               <li><a href="#0" class="category--sub-link">Fatka om barn</a></li>
               <li><a href="#0" class="category--sub-link">Barnearbeid</a></li>
@@ -113,7 +113,7 @@
               <img src="/img/story.jpg">
               <span>Du kan</span>
             </a>
-            <ul class="sub-menu category--sub-links">
+            <ul class="category--sub-links">
               <li><a href="#0" class="category--sub-link">Til deg som fadder</a></li>
             </ul>
           </li>
@@ -128,7 +128,7 @@
               <img src="/img/story-3.jpg">
               <span>Kryssord og andre nøtter</span>
             </a>
-            <ul class="sub-menu category--sub-links">
+            <ul class="category--sub-links">
               <li><a href="#0" class="category--sub-link">Kryssord</a></li>
               <li><a href="#0" class="category--sub-link">Puslespill</a></li>
               <li><a href="#0" class="category--sub-link">rebus</a></li>

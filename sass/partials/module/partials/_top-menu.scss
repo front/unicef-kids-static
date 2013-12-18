@@ -1,28 +1,18 @@
-@mixin menuitem-color($color-bg: $category-color-default, $color-text: $menu-color) {
-  a {
+@mixin menuitem-color($color-bg: $category-color-default) {
+  .menu-tab--link {
     background-color: $color-bg;
-    color: $color-text;
     @include border-radius($space-double $space-double 0 0);
   }
 }
 
-@mixin submenu-color($color-bg, $color-text: $menu-color) {
-  ul {
-    li {
-      border-top: 1px solid darken($color-bg, 5);
-      background-color: $color-bg;
-    }
-    a {
-      color: $color-text !important;
-    }
-  }
-}
 
-.top-menu {
+.menu-tabs {
   @extend .clearfix;
   position: absolute;
   top: 0;
   left: 0;
+  font-weight: 600;
+
   ul {
     margin: 16px 15px;
     padding: 0;
@@ -32,14 +22,15 @@
     }
   }
 
-  li {
+  .menu-tab {
     display: none;
+    
     &.more {
       display: block;
     }
   }
 
-  a {
+  .menu-tab--lnk {
     color: $color-header;
     font-size: em(18);
     font-weight: 600;
@@ -47,12 +38,17 @@
 
   @include breakpoint($break-medium) {
     position: relative;
+    
+    .more {
+      display: none;
+    }
+    
     ul {
       width: 100%;
       margin: 0;
     }
 
-    li {
+    .menu-tab {
       list-style: none;
       display: block;
       float: left;
@@ -60,37 +56,31 @@
       padding: 0;
       text-transform: uppercase;
 
-      + li {
+      + .menu-tab {
         margin-left: $space;
-      }
-      
-      &.more {
-        display: none;
-      }
-
-      &:nth-child(1) {
-        @include menuitem-color($category-color-1);
-        @include submenu-color($category-color-1);
-      }
-      &:nth-child(2) {
-        @include menuitem-color($category-color-2);
-        @include submenu-color($category-color-2);
-      }
-      &:nth-child(3) {
-        @include menuitem-color($category-color-3);
-        @include submenu-color($category-color-3);
-      }
-      &:nth-child(4) {
-        @include menuitem-color();
       }
     }
 
-    a {
+    .menu-tab__category-1 {
+      @include menuitem-color($category-color-1);
+    }
+    .menu-tab__category-2 {
+      @include menuitem-color($category-color-2);
+    }
+    .menu-tab__category-3 {
+      @include menuitem-color($category-color-3);
+    }
+    .menu-tab__category-default {
+      @include menuitem-color();
+    }
+
+    .menu-tab--link {
       display: block;
       float: left;
       padding: $space;
       height: 55px;
       line-height: 47px;
+      color: $menu-color;
       @include transition(all .2s ease-out);
 
       i {
@@ -105,9 +95,9 @@
       }
     }
 
-    .active a,
-    a:hover,
-    a:focus {
+    .active .menu-tab--link,
+    .menu-tab--link:hover,
+    .menu-tab--link:focus {
       height: 65px;
       margin-top: -10px;
 
@@ -118,8 +108,35 @@
   }
 }
 
-.sub-menu {
-  display: none;
+.menu-tab--sub li {
+  list-style: none;
+  display: inline-block;
+  line-height: ($space * 3);
+  margin-right: $space-double;
+}
+
+.menu-tab--sub-link {
+  color: $menu-color;
+
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: underline;
+    color: $menu-color;
+  }
+}
+
+@include breakpoint($break-small) {
+  .sub-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+
+  .active .sub-menu {
+    display: block;
+  }
 }
 // sub menu
 // &:hover ul {
