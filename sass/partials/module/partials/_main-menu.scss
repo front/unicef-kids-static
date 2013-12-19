@@ -1,15 +1,3 @@
-
-@mixin mainmenu-color($color-bg, $color-text: $menu-color) {
-  .category--main-link,
-  .category--main-link span {
-    background: $color-bg;
-  }
-  
-  .category--sub-link {
-    background-color: $color-bg;
-  }
-}
-
 .open-menu .page-header--bottom {
   border-top: $space-half solid $color-menu-bg;
 }

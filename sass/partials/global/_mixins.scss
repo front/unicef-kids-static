@@ -30,3 +30,18 @@
 @mixin doublebgcolor($color1, $color2) {
   background-image: linear-gradient(left, color-stops($color1 50%, $color2 50%));
 }
+
+@mixin mainmenu-color($category-color) {
+  .category--img,
+  .category--img-btn {
+    background: $category-color;
+  }
+  
+  .category--title a {
+    color: $category-color;
+  }
+
+  .category--sub-link {
+    background-color: $category-color;
+  }
+}

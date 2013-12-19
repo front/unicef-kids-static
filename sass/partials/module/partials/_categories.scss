@@ -17,24 +17,12 @@
   @include mainmenu-color($category-color-6);
 }
 
-.category {
-  font-weight: 600;
-}
-
-.category--main-link {
+.category--img {
   position: relative;
   display: block;
 
   img {
     display: none;
-  }
-
-  span {
-    @extend .btn;
-    display: block;
-    border-top: 1px solid $color-menu-separator;
-    color: $color-menu-item;
-    margin: 0 $space-half;
   }
 
   @include breakpoint($break-small) {
@@ -47,16 +35,25 @@
       width: 100%;
       @include border-radius(0 0 $space-half $space-half);
     }
-    
-    span {
-      position: absolute;
-      bottom: 3%;
-      width: 96%;
-      margin-left: 2%;
-      border-top: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+  }
+}
+
+.category--img-btn {
+  @extend .btn;
+  display: block;
+  border-top: 1px solid $color-menu-separator;
+  color: $color-menu-item;
+  margin: 0 $space-half;
+  font-weight: 600;
+
+  @include breakpoint($break-small) {
+    position: absolute;
+    bottom: 3%;
+    width: 96%;
+    margin-left: 2%;
+    border-top: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }
 
@@ -67,6 +64,8 @@
 .category--sub-link {
   @extend .btn;
   width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .category--main-link span,
