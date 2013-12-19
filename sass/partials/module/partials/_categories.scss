@@ -22,7 +22,13 @@
   display: block;
 
   img {
-    display: none;
+    display: block;
+    width: 100%;
+    @include border-radius(0 0 $space-half $space-half);
+
+    .categories__menu & {
+      display: none;
+    }
   }
 
   @include breakpoint($break-small) {
@@ -31,9 +37,9 @@
     padding: $space-half 0 0;
 
     img {
-      display: block;
-      width: 100%;
-      @include border-radius(0 0 $space-half $space-half);
+      .categories__menu & {
+        display: block;
+      }
     }
   }
 }

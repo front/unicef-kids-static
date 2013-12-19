@@ -896,6 +896,16 @@ body.open-menu .main-menu {
 }
 /* line 24, ../sass/partials/module/partials/_categories.scss */
 .category--img img {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+}
+/* line 29, ../sass/partials/module/partials/_categories.scss */
+.categories__menu .category--img img {
   display: none;
 }
 @media (min-width: 480px) {
@@ -909,19 +919,13 @@ body.open-menu .main-menu {
     width: 100%;
     padding: 8px 0 0;
   }
-  /* line 33, ../sass/partials/module/partials/_categories.scss */
-  .category--img img {
+  /* line 40, ../sass/partials/module/partials/_categories.scss */
+  .categories__menu .category--img img {
     display: block;
-    width: 100%;
-    -webkit-border-radius: 0 0 8px 8px;
-    -moz-border-radius: 0 0 8px 8px;
-    -ms-border-radius: 0 0 8px 8px;
-    -o-border-radius: 0 0 8px 8px;
-    border-radius: 0 0 8px 8px;
   }
 }
 
-/* line 41, ../sass/partials/module/partials/_categories.scss */
+/* line 47, ../sass/partials/module/partials/_categories.scss */
 .category--img-btn {
   display: block;
   border-top: 1px solid white;
@@ -930,7 +934,7 @@ body.open-menu .main-menu {
   font-weight: 600;
 }
 @media (min-width: 480px) {
-  /* line 41, ../sass/partials/module/partials/_categories.scss */
+  /* line 47, ../sass/partials/module/partials/_categories.scss */
   .category--img-btn {
     position: absolute;
     bottom: 3%;
@@ -942,19 +946,19 @@ body.open-menu .main-menu {
   }
 }
 
-/* line 60, ../sass/partials/module/partials/_categories.scss */
+/* line 66, ../sass/partials/module/partials/_categories.scss */
 .category--sub-links li {
   margin-top: 4px;
 }
 
-/* line 64, ../sass/partials/module/partials/_categories.scss */
+/* line 70, ../sass/partials/module/partials/_categories.scss */
 .category--sub-link {
   width: 100%;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-/* line 72, ../sass/partials/module/partials/_categories.scss */
+/* line 78, ../sass/partials/module/partials/_categories.scss */
 .category--main-link span,
 .category--sub-link {
   z-index: 100;
@@ -963,7 +967,7 @@ body.open-menu .main-menu {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 77, ../sass/partials/module/partials/_categories.scss */
+/* line 83, ../sass/partials/module/partials/_categories.scss */
 .category--main-link span:hover, .category--main-link span:focus,
 .category--sub-link:hover,
 .category--sub-link:focus {
