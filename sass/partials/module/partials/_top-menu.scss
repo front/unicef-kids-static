@@ -5,6 +5,12 @@
   }
 }
 
+.more-btn {
+
+  @include breakpoint($break-medium) {
+    display: none;
+  }
+}
 
 .menu-tabs {
   @extend .clearfix;
@@ -22,12 +28,12 @@
     }
   }
 
+  li {
+    list-style: none;
+  }
+
   .menu-tab {
     display: none;
-    
-    &.more {
-      display: block;
-    }
   }
 
   .menu-tab--lnk {
@@ -39,17 +45,12 @@
   @include breakpoint($break-medium) {
     position: relative;
     
-    .more {
-      display: none;
-    }
-    
     ul {
       width: 100%;
       margin: 0;
     }
 
     .menu-tab {
-      list-style: none;
       display: block;
       float: left;
       margin-left: 0px;
@@ -109,7 +110,6 @@
 }
 
 .menu-tab--sub li {
-  list-style: none;
   display: inline-block;
   line-height: ($space * 3);
   margin-right: $space-double;

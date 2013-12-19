@@ -3,7 +3,7 @@
 }
 
 .page-header--bottom {
-  border-top: ($space * 3) solid $color-blue;
+  border-top: ($space * .25) solid $category-color-default;
 
   .active-category-1 & {
     border-color: $category-color-1;
@@ -15,6 +15,11 @@
 
   .active-category-3 & {
     border-color: $category-color-3;
+  }    
+  
+  @include breakpoint($break-medium) {
+    border-top: ($space * 3) solid $color-blue;
+
   }
 }
 
@@ -43,6 +48,11 @@ body.open-menu {
   
   li {
     list-style: none;
+  }
+
+  @include breakpoint(max-width $break-small) {
+    background-color: #efefef;
+    z-index: 100;
   }
  
   @include breakpoint($break-small $break-medium) {

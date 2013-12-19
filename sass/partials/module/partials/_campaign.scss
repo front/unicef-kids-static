@@ -1,0 +1,129 @@
+.campaign.page-banner-120 {
+  background-image: url('http://d2bmwp0nm8ym62.cloudfront.net/cdn/farfuture/E1lEFqkrZyXLz1hrCz6PsoJ1PlbrklpFJmDFdMt1p2s/mtime:1373440704/sites/default/files/banners/barn-unge-banner-skole-foto-toril-f.-ingvaldsen-nye-troms-2.jpg');
+}
+
+.campaign {
+  background: url(http://d2bmwp0nm8ym62.cloudfront.net/cdn/farfuture/RFDezFZbdpMQbj8EFBjoYywP…mtime:1386674613/sites/all/themes/unicef-theme/images/hero-placeholder.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding-top: 110px;
+  position: relative;
+  overflow-x: hidden;
+
+  @include breakpoint($break-medium) {
+    min-height: 500px;
+  }
+}
+
+.campaign--message {
+  color: white;
+  position: relative;
+  @include border-radius($space-double);
+
+  @include breakpoint($break-medium) {
+    // bottom: ms(2);
+
+    // Columns
+    &.width-five {
+      @include grid-span(5,12);
+    }
+    &.width-six {
+      @include grid-span(6,12);
+    }
+    &.width-seven {
+      @include grid-span(7,12);
+    }
+    &.width-eight {
+      @include grid-span(8,12);
+    }
+    &.width-nine {
+      @include grid-span(9,12);
+    }
+    &.width-ten {
+      @include grid-span(10,12);
+    }
+    // Block alignment
+    &.align-left {
+      float: left;
+      margin-left: 0;
+    }
+    &.align-right {
+      float: right;
+      margin-right: 0;
+    }
+    &.align-center {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  // Padding
+  &.padding-normal {
+    padding: 1em;
+  }
+  &.padding-wide {
+    padding: 2em;
+  }
+  // Background color
+  &.bgcolor-black {
+    background-color: $color-black;
+  }
+  &.bgcolor-black-transparent {
+    background-color: #000;
+    background-color: rgba(0,0,0,.5);
+  }
+  &.bgcolor-red {
+    background-color: #C00;
+  }
+  &.bgcolor-red-transparent {
+    background-color: #C00;
+    background-color: rgba(204,0,0,0.7);
+  }
+  // Text align
+  &.textalign-right {
+    text-align: right;
+  }
+  &.textalign-center {
+    text-align: center;
+  }
+  // Text shadow
+  &.shadow-normal {
+    // text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  }
+  &.shadow-strong {
+    // text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+  }
+}
+
+.title {
+  font-size: em(29);
+
+  @include breakpoint($break-medium) {
+    &.medium {
+      font-size: em(37);
+    }
+    &.large {
+      font-size: em(47);
+    }
+    &.x-large {
+      font-size: em(73);
+    }
+  }
+}
+
+.teaser {
+  line-height: 1.5;
+
+  @include breakpoint($break-medium) {
+    &.large {
+      font-size: em(24);
+      font-weight: 200;
+    }
+    &.x-large {
+      font-size: em(28);
+
+      p {
+        line-height: em(40);
+      }
+    }
+  }
+}

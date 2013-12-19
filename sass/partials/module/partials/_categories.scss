@@ -20,6 +20,7 @@
 .category--img {
   position: relative;
   display: block;
+  padding: $space-half 0 0;
 
   img {
     display: block;
@@ -34,7 +35,6 @@
   @include breakpoint($break-small) {
     @include border-radius($space-half);
     width: 100%;
-    padding: $space-half 0 0;
 
     img {
       .categories__menu & {
@@ -107,5 +107,26 @@
     &:focus {
       margin-left: -($space-half);  
     }
+  }
+}
+
+// Change color on headings based on active category in body
+.p-container {
+  h1, h2, h3, h4, h5, h6, blockquote p {
+    .active-category-1 & { color: $category-color-1 }
+    .active-category-2 & { color: $category-color-2 }
+    .active-category-3 & { color: $category-color-3 }
+    .active-category-4 & { color: $category-color-4 }
+    .active-category-5 & { color: $category-color-5 }
+    .active-category-6 & { color: $category-color-6 }
+  }
+
+  blockquote {
+    .active-category-1 & { border-color: $category-color-1 }
+    .active-category-2 & { border-color: $category-color-2 }
+    .active-category-3 & { border-color: $category-color-3 }
+    .active-category-4 & { border-color: $category-color-4 }
+    .active-category-5 & { border-color: $category-color-5 }
+    .active-category-6 & { border-color: $category-color-6 } 
   }
 }
