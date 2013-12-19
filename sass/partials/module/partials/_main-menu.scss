@@ -59,6 +59,7 @@
   @include breakpoint($break-small) {
     position: relative;
     overflow: hidden;
+    left: 0;
     width: 100%;
     height: auto;
     background-color: transparent;
