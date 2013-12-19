@@ -26,7 +26,7 @@ body {
 @include breakpoint(max-width $break-small) {
   body.open-menu {
     .l-container, .p-container {
-      margin-left: 50%;
+      margin-left: 85%;
     }
   }
 }

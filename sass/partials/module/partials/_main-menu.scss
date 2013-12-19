@@ -18,15 +18,23 @@
   }
 }
 
+body.open-menu {
+  @include breakpoint(max-width $break-small) {
+    overflow: hidden;
+    // position: fixed;
+  }
+}
+
 .main-menu {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: -50%;
-  width: 50%;
+  left: -85%;
+  width: 85%;
   height: 100%;
   overflow: scroll;
   display: none;
+  background-color: white;
   
   ul {
     margin: 0;

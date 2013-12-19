@@ -51,6 +51,13 @@
   color: $color-menu-item;
   margin: 0 $space-half;
   font-weight: 600;
+  text-transform: uppercase;
+
+  @include breakpoint(max-width $break-small) {
+    text-align: left;
+    margin-left: 0;
+    @include border-radius(0 $space $space 0);
+  }
 
   @include breakpoint($break-small) {
     position: absolute;
@@ -58,29 +65,47 @@
     width: 96%;
     margin-left: 2%;
     border-top: none;
-    text-transform: uppercase;
     letter-spacing: 1px;
   }
 }
 
+.category--sub-links {
+  @include breakpoint(max-width $break-small) {
+    width: 90%;
+  }
+}
+
 .category--sub-links li {
-  margin-top: ($space-half * .5);
+  margin-top: 1px;
+  @include breakpoint($break-small) {
+    margin-top: ($space-half * .5); 
+  }
 }
 
 .category--sub-link {
   @extend .btn;
   width: 100%;
   font-weight: 600;
-  text-transform: uppercase;
+
+  @include breakpoint($break-small) {
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(max-width $break-small) {
+    text-align: left;
+    @include border-radius(0 $space $space 0);
+  }
 }
 
 .category--main-link span,
 .category--sub-link {
-  z-index: 100;
-  @include transition(all .2s ease-out);
 
-  &:hover,
-  &:focus {
-    margin-left: -($space-half);  
+  @include breakpoint($break-small) {
+    @include transition(all .2s ease-out);
+
+    &:hover,
+    &:focus {
+      margin-left: -($space-half);  
+    }
   }
 }

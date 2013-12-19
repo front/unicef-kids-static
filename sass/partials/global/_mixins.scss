@@ -34,7 +34,13 @@
 @mixin mainmenu-color($category-color) {
   .category--img,
   .category--img-btn {
-    background: $category-color;
+    background-color: $category-color;
+  }
+
+  .category--img {
+    @include breakpoint(max-width $break-small) {
+      background-color: transparent;
+    }
   }
   
   .category--title a {
