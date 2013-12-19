@@ -1,7 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:600,600italic,700,700italic");
 @import url("http://fonts.googleapis.com/css?family=Passion+One:400");
-/* line 36, ../../../.rvm/gems/ruby-1.8.7-p374/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
+/* line 36, ../../../.rvm/gems/ruby-1.9.3-p484/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,7 +9,7 @@
   *behavior: url('/css/../behaviors/box-sizing/boxsizing.php');
 }
 
-/* line 4, ../../../.rvm/gems/ruby-1.8.7-p374/gems/toolkit-1.3.8/stylesheets/toolkit/_fluid-media.scss */
+/* line 4, ../../../.rvm/gems/ruby-1.9.3-p484/gems/toolkit-1.3.8/stylesheets/toolkit/_fluid-media.scss */
 img, video {
   max-width: 100%;
   height: auto;
@@ -17,8 +17,8 @@ img, video {
 
 /* line 16, ../sass/partials/base/_base.scss */
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -62,12 +62,14 @@ blockquote p {
 /* line 50, ../sass/partials/base/_base.scss */
 input {
   -webkit-appearance: none;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 55, ../sass/partials/base/_base.scss */
+/* line 58, ../sass/partials/base/_base.scss */
 button,
 input,
 select,
@@ -77,14 +79,14 @@ textarea {
   margin: 0;
 }
 
-/* line 64, ../sass/partials/base/_base.scss */
+/* line 65, ../sass/partials/base/_base.scss */
 button,
 input {
   line-height: normal;
   text-transform: none;
 }
 
-/* line 70, ../sass/partials/base/_base.scss */
+/* line 73, ../sass/partials/base/_base.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -116,7 +118,7 @@ input[type="search"] {
   width: 1px;
 }
 
-/* line 25, ../sass/partials/base/_helper-classes.scss */
+/* line 26, ../sass/partials/base/_helper-classes.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -136,7 +138,7 @@ input[type="search"] {
 .clearfix, .g-half, .g-third, .header .unicef-home, .top-menu {
   *zoom: 1;
 }
-/* line 58, ../sass/partials/base/_helper-classes.scss */
+/* line 59, ../sass/partials/base/_helper-classes.scss */
 .clearfix:before, .g-half:before, .g-third:before, .header .unicef-home:before, .top-menu:before, .clearfix:after, .g-half:after, .g-third:after, .header .unicef-home:after, .top-menu:after {
   content: " ";
   /* 1 */
@@ -183,7 +185,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 400;
 }
 
-/* line 7, ../sass/partials/base/_typography.scss */
+/* line 8, ../sass/partials/base/_typography.scss */
 h1,
 .h1 {
   font-size: 4.25em;
@@ -192,7 +194,7 @@ h1,
   margin-bottom: 0.3em;
 }
 
-/* line 15, ../sass/partials/base/_typography.scss */
+/* line 16, ../sass/partials/base/_typography.scss */
 h2,
 .h2 {
   font-size: 2.875em;
@@ -201,7 +203,7 @@ h2,
   margin-bottom: 0.3em;
 }
 
-/* line 23, ../sass/partials/base/_typography.scss */
+/* line 24, ../sass/partials/base/_typography.scss */
 h3,
 .h3 {
   font-size: 1.875em;
@@ -210,7 +212,7 @@ h3,
   margin-bottom: 0.3em;
 }
 
-/* line 31, ../sass/partials/base/_typography.scss */
+/* line 32, ../sass/partials/base/_typography.scss */
 h4,
 .h4 {
   font-size: 1.625em;
@@ -219,7 +221,7 @@ h4,
   margin-bottom: 0.2em;
 }
 
-/* line 39, ../sass/partials/base/_typography.scss */
+/* line 40, ../sass/partials/base/_typography.scss */
 h5,
 .h5 {
   font-size: 1.25em;
@@ -228,7 +230,7 @@ h5,
   margin-bottom: 0.2em;
 }
 
-/* line 47, ../sass/partials/base/_typography.scss */
+/* line 48, ../sass/partials/base/_typography.scss */
 h6,
 .h6 {
   font-size: 1em;
@@ -842,7 +844,7 @@ body {
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
+  left: -50%;
   width: 50%;
   height: 100%;
   overflow: scroll;
@@ -1070,9 +1072,9 @@ body.open-menu .main-menu {
   font-weight: 400;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
