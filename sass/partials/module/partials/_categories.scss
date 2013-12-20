@@ -21,6 +21,7 @@
   position: relative;
   display: block;
   padding: $space-half 0 0;
+  @include border-radius($space-half);
 
   img {
     display: block;
@@ -33,7 +34,6 @@
   }
 
   @include breakpoint($break-small) {
-    @include border-radius($space-half);
     width: 100%;
 
     img {

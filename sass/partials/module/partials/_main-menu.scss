@@ -1,6 +1,3 @@
-.open-menu .page-header--bottom {
-  border-top: $space-half solid $color-menu-bg;
-}
 
 .page-header--bottom {
   border-top: ($space * .25) solid $category-color-default;
@@ -21,6 +18,11 @@
     border-top: ($space * 3) solid $color-blue;
 
   }
+}
+
+.open-menu .page-header--bottom {
+  border-top: $space-half solid;
+  border-color: $color-menu-bg; 
 }
 
 body.open-menu {
