@@ -12,8 +12,8 @@
 
   .active-category-3 & {
     border-color: $category-color-3;
-  }    
-  
+  }
+
   @include breakpoint($break-medium) {
     border-top: ($space * 3) solid $color-blue;
 
@@ -22,7 +22,7 @@
 
 .open-menu .page-header--bottom {
   border-top: $space-half solid;
-  border-color: $color-menu-bg; 
+  border-color: $color-menu-bg;
 }
 
 body.open-menu {
@@ -42,12 +42,12 @@ body.open-menu {
   overflow: scroll;
   display: none;
   background-color: white;
-  
+
   ul {
     margin: 0;
     padding: 0;
   }
-  
+
   li {
     list-style: none;
   }
@@ -56,7 +56,7 @@ body.open-menu {
     background-color: #efefef;
     z-index: 100;
   }
- 
+
   @include breakpoint($break-small $break-medium) {
     padding-left: 10px;
     padding-right: 10px;
@@ -68,13 +68,16 @@ body.open-menu {
     left: 0;
     width: 100%;
     height: auto;
-    
+
     ul {
       padding-bottom: 26px;
     }
-    
+
     li {
       margin-top: 30px;
+      ul {
+        padding-bottom: 0;
+      }
     }
   }
 

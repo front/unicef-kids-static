@@ -1,43 +1,19 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="/js/fastclick.js"></script>
+<script src="/js/menumasonry.js"></script>
 
 <script>
-  /* Menu overlay toggle */
-  window.toggleMenu = function () {
-    if($('.main-menu').is(':visible')) {
-      $('body').removeClass('open-menu');
-    } else {
-      $('body').addClass('open-menu');
-      setTimeout(adjustMainMenu, 50);
-    }
-  };
+
+  /* MenuMasonry options */
+  $('a.menu-tab--link, li.more-btn a').menuMasonry('.main-menu', 'open-menu', {
+    breakpoints: [0, 480, 960],
+    layouts: ['mobile', 'tablet', 'desktop'],
+    skips: [100, 2, 3],
+    margins: [0, 20, 30]
+  });
 
   /* Fastclick */
   (function(){ FastClick.attach(document.body); })();
-
-  /* Manual Masonry */
-  // function adjustMainMenu() {
-  //   if($('.main-menu').attr('adjusted'))
-  //     return;
-
-  //   var gutter = 30;
-  //   var elems = $('.main-menu > ul > li').toArray();
-  //   // console.log(elems);
-
-  //   for(var i = 3, l = elems.length; i<l; i++) {
-  //     var elem = $(elems[i]);
-  //     var prev = $(elems[i-3]);
-  //     var margin = (prev.offset().top + prev.height()) - elem.offset().top + 2*gutter;
-
-  //     // console.log(prev.offset().top + ' - ' + prev.height() + ' - ' +
-  //     //  elem.offset().top + ' > ' + margin);
-
-  //     if(margin < gutter) {
-  //       elem.css('margin-top', margin + 'px');
-  //     }
-  //   }
-  //   $('.main-menu').attr('adjusted', true);
-  // }
 
 </script>
