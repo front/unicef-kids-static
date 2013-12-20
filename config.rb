@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require 'toolkit'
+# require 'toolkit'
 require 'singularitygs'
 require 'breakpoint'
 
