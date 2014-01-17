@@ -4,8 +4,8 @@
 @import url("http://fonts.googleapis.com/css?family=Passion+One:400");
 /* line 16, ../sass/partials/base/_base.scss */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
   color: #008aff;
 }
-/* line 35, ../sass/partials/base/_base.scss */
+/* line 34, ../sass/partials/base/_base.scss */
 a:hover, a:focus {
   color: #0074d6;
 }
@@ -58,14 +58,12 @@ blockquote p {
 /* line 59, ../sass/partials/base/_base.scss */
 input {
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 67, ../sass/partials/base/_base.scss */
+/* line 64, ../sass/partials/base/_base.scss */
 button,
 input,
 select,
@@ -75,14 +73,14 @@ textarea {
   margin: 0;
 }
 
-/* line 74, ../sass/partials/base/_base.scss */
+/* line 73, ../sass/partials/base/_base.scss */
 button,
 input {
   line-height: normal;
   text-transform: none;
 }
 
-/* line 82, ../sass/partials/base/_base.scss */
+/* line 79, ../sass/partials/base/_base.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -114,7 +112,7 @@ input[type="search"] {
   width: 1px;
 }
 
-/* line 26, ../sass/partials/base/_helper-classes.scss */
+/* line 25, ../sass/partials/base/_helper-classes.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -134,7 +132,7 @@ input[type="search"] {
 .clearfix, .g-half, .g-third, .page-header .unicef-home, .menu-tabs {
   *zoom: 1;
 }
-/* line 59, ../sass/partials/base/_helper-classes.scss */
+/* line 58, ../sass/partials/base/_helper-classes.scss */
 .clearfix:before, .g-half:before, .g-third:before, .page-header .unicef-home:before, .menu-tabs:before, .clearfix:after, .g-half:after, .g-third:after, .page-header .unicef-home:after, .menu-tabs:after {
   content: " ";
   /* 1 */
@@ -181,7 +179,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 400;
 }
 
-/* line 8, ../sass/partials/base/_typography.scss */
+/* line 7, ../sass/partials/base/_typography.scss */
 h1,
 .h1 {
   font-size: 4.25em;
@@ -190,7 +188,7 @@ h1,
   margin-bottom: 0.3em;
 }
 
-/* line 16, ../sass/partials/base/_typography.scss */
+/* line 15, ../sass/partials/base/_typography.scss */
 h2,
 .h2 {
   font-size: 2.875em;
@@ -199,7 +197,7 @@ h2,
   margin-bottom: 0.3em;
 }
 
-/* line 24, ../sass/partials/base/_typography.scss */
+/* line 23, ../sass/partials/base/_typography.scss */
 h3,
 .h3 {
   font-size: 1.875em;
@@ -208,7 +206,7 @@ h3,
   margin-bottom: 0.3em;
 }
 
-/* line 32, ../sass/partials/base/_typography.scss */
+/* line 31, ../sass/partials/base/_typography.scss */
 h4,
 .h4 {
   font-size: 1.625em;
@@ -217,7 +215,7 @@ h4,
   margin-bottom: 0.2em;
 }
 
-/* line 40, ../sass/partials/base/_typography.scss */
+/* line 39, ../sass/partials/base/_typography.scss */
 h5,
 .h5 {
   font-size: 1.25em;
@@ -226,7 +224,7 @@ h5,
   margin-bottom: 0.2em;
 }
 
-/* line 48, ../sass/partials/base/_typography.scss */
+/* line 47, ../sass/partials/base/_typography.scss */
 h6,
 .h6 {
   font-size: 1em;
@@ -361,10 +359,8 @@ body {
     right: 0;
     padding: 0;
     background-color: #008aff;
-    -webkit-border-radius: 0 0 16px 16px;
     -moz-border-radius: 0 0 16px 16px;
-    -ms-border-radius: 0 0 16px 16px;
-    -o-border-radius: 0 0 16px 16px;
+    -webkit-border-radius: 0;
     border-radius: 0 0 16px 16px;
   }
   /* line 21, ../sass/partials/module/partials/_header.scss */
@@ -480,37 +476,29 @@ body {
   /* line 2, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .menu-tab__category-1 .menu-tab--link {
     background-color: #14c700;
-    -webkit-border-radius: 32px 32px 0 0;
     -moz-border-radius: 32px 32px 0 0;
-    -ms-border-radius: 32px 32px 0 0;
-    -o-border-radius: 32px 32px 0 0;
+    -webkit-border-radius: 32px;
     border-radius: 32px 32px 0 0;
   }
   /* line 2, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .menu-tab__category-2 .menu-tab--link {
     background-color: #ff822f;
-    -webkit-border-radius: 32px 32px 0 0;
     -moz-border-radius: 32px 32px 0 0;
-    -ms-border-radius: 32px 32px 0 0;
-    -o-border-radius: 32px 32px 0 0;
+    -webkit-border-radius: 32px;
     border-radius: 32px 32px 0 0;
   }
   /* line 2, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .menu-tab__category-3 .menu-tab--link {
     background-color: #dc4feb;
-    -webkit-border-radius: 32px 32px 0 0;
     -moz-border-radius: 32px 32px 0 0;
-    -ms-border-radius: 32px 32px 0 0;
-    -o-border-radius: 32px 32px 0 0;
+    -webkit-border-radius: 32px;
     border-radius: 32px 32px 0 0;
   }
   /* line 2, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .menu-tab__category-default .menu-tab--link {
     background-color: #008aff;
-    -webkit-border-radius: 32px 32px 0 0;
     -moz-border-radius: 32px 32px 0 0;
-    -ms-border-radius: 32px 32px 0 0;
-    -o-border-radius: 32px 32px 0 0;
+    -webkit-border-radius: 32px;
     border-radius: 32px 32px 0 0;
   }
   /* line 78, ../sass/partials/module/partials/_top-menu.scss */
@@ -521,17 +509,17 @@ body {
     height: 55px;
     line-height: 47px;
     color: white;
-    -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
   }
   /* line 87, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .menu-tab--link i {
     display: inline-block;
-    -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
   }
   /* line 91, ../sass/partials/module/partials/_top-menu.scss */
@@ -541,7 +529,7 @@ body {
     margin-top: -14px;
     padding-left: 8px;
   }
-  /* line 101, ../sass/partials/module/partials/_top-menu.scss */
+  /* line 99, ../sass/partials/module/partials/_top-menu.scss */
   .menu-tabs .active .menu-tab--link,
   .menu-tabs .menu-tab--link:hover,
   .menu-tabs .menu-tab--link:focus {
@@ -552,10 +540,10 @@ body {
   .menu-tabs .active .menu-tab--link i,
   .menu-tabs .menu-tab--link:hover i,
   .menu-tabs .menu-tab--link:focus i {
-    -webkit-transform: rotate(-360deg);
     -moz-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
     -o-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
 }
@@ -571,7 +559,7 @@ body {
 .menu-tab--sub-link {
   color: white;
 }
-/* line 123, ../sass/partials/module/partials/_top-menu.scss */
+/* line 121, ../sass/partials/module/partials/_top-menu.scss */
 .menu-tab--sub-link:hover, .menu-tab--sub-link:focus, .menu-tab--sub-link.active {
   text-decoration: underline;
   color: white;
@@ -703,14 +691,12 @@ body.open-menu .main-menu {
   text-decoration: none;
   background-color: #008aff;
   color: white;
-  -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
+  -webkit-border-radius: 16px;
   border-radius: 16px;
-  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 /* line 17, ../sass/partials/module/partials/_buttons.scss */
@@ -823,7 +809,7 @@ body.open-menu .main-menu {
   font-weight: 300;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__1 .category--img,
 .category__1 .category--img-btn {
   background-color: #14c700;
@@ -843,7 +829,7 @@ body.open-menu .main-menu {
   background-color: #14c700;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__2 .category--img,
 .category__2 .category--img-btn {
   background-color: #ff822f;
@@ -863,7 +849,7 @@ body.open-menu .main-menu {
   background-color: #ff822f;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__3 .category--img,
 .category__3 .category--img-btn {
   background-color: #dc4feb;
@@ -883,7 +869,7 @@ body.open-menu .main-menu {
   background-color: #dc4feb;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__4 .category--img,
 .category__4 .category--img-btn {
   background-color: #ffca00;
@@ -903,7 +889,7 @@ body.open-menu .main-menu {
   background-color: #ffca00;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__5 .category--img,
 .category__5 .category--img-btn {
   background-color: #9252ff;
@@ -923,7 +909,7 @@ body.open-menu .main-menu {
   background-color: #9252ff;
 }
 
-/* line 36, ../sass/partials/global/_mixins.scss */
+/* line 35, ../sass/partials/global/_mixins.scss */
 .category__6 .category--img,
 .category__6 .category--img-btn {
   background-color: #00973f;
@@ -948,20 +934,16 @@ body.open-menu .main-menu {
   position: relative;
   display: block;
   padding: 8px 0 0;
-  -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 /* line 26, ../sass/partials/module/partials/_categories.scss */
 .category--img img {
   display: block;
   width: 100%;
-  -webkit-border-radius: 0 0 8px 8px;
   -moz-border-radius: 0 0 8px 8px;
-  -ms-border-radius: 0 0 8px 8px;
-  -o-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0;
   border-radius: 0 0 8px 8px;
 }
 /* line 31, ../sass/partials/module/partials/_categories.scss */
@@ -993,10 +975,8 @@ body.open-menu .main-menu {
   .category--img-btn {
     text-align: left;
     margin-left: 0;
-    -webkit-border-radius: 0 16px 16px 0;
     -moz-border-radius: 0 16px 16px 0;
-    -ms-border-radius: 0 16px 16px 0;
-    -o-border-radius: 0 16px 16px 0;
+    -webkit-border-radius: 0;
     border-radius: 0 16px 16px 0;
   }
 }
@@ -1045,24 +1025,22 @@ body.open-menu .main-menu {
   /* line 85, ../sass/partials/module/partials/_categories.scss */
   .category--sub-link {
     text-align: left;
-    -webkit-border-radius: 0 16px 16px 0;
     -moz-border-radius: 0 16px 16px 0;
-    -ms-border-radius: 0 16px 16px 0;
-    -o-border-radius: 0 16px 16px 0;
+    -webkit-border-radius: 0;
     border-radius: 0 16px 16px 0;
   }
 }
 
 @media (min-width: 480px) {
-  /* line 101, ../sass/partials/module/partials/_categories.scss */
+  /* line 100, ../sass/partials/module/partials/_categories.scss */
   .category--main-link span,
   .category--sub-link {
-    -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
   }
-  /* line 107, ../sass/partials/module/partials/_categories.scss */
+  /* line 106, ../sass/partials/module/partials/_categories.scss */
   .category--main-link span:hover, .category--main-link span:focus,
   .category--sub-link:hover,
   .category--sub-link:focus {
@@ -1121,7 +1099,7 @@ body.open-menu .main-menu {
 
 /* line 1, ../sass/partials/module/partials/_campaign.scss */
 .campaign.page-banner-120 {
-  background-image: url("http://d2bmwp0nm8ym62.cloudfront.net/cdn/farfuture/E1lEFqkrZyXLz1hrCz6PsoJ1PlbrklpFJmDFdMt1p2s/mtime:1373440704/sites/default/files/banners/barn-unge-banner-skole-foto-toril-f.-ingvaldsen-nye-troms-2.jpg");
+  background-image: url("http://d2bmwp0nm8ym62.cloudfront.net/cdn/farfuture/dmA44b6Xo01jThJxO1dCiU0OnMkG2yIHgF1Ta3dSFb8/mtime:1373440704/sites/default/files/banners/barn-unge-banner-skole-foto-toril-f.-ingvaldsen-nye-troms-2.jpg");
 }
 
 /* line 5, ../sass/partials/module/partials/_campaign.scss */
@@ -1143,10 +1121,8 @@ body.open-menu .main-menu {
 .campaign--message {
   color: white;
   position: relative;
-  -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
-  -ms-border-radius: 32px;
-  -o-border-radius: 32px;
+  -webkit-border-radius: 32px;
   border-radius: 32px;
 }
 @media (min-width: 960px) {
